@@ -1,0 +1,6 @@
+start_utc,direction,description,s_after_load_step,s_after_load_end
+2026-10-26T12:46:06.277Z,out,Setting desired count to 6.,292.0,-128.0
+2026-10-26T13:05:09.203Z,in,Setting desired count to 5.,1435.0,1015.0
+2026-10-26T13:07:09.186Z,in,Setting desired count to 4.,1555.0,1135.0
+2026-10-26T13:09:09.202Z,in,Setting desired count to 3.,1675.0,1255.0
+2026-10-26T13:11:09.205Z,in,Setting desired count to 2.,1795.0,1375.0

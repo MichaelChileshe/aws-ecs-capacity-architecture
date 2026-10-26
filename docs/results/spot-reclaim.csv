@@ -1,0 +1,3 @@
+drill,split_before,tasks_stopped,window_s,sent,ok,availability_pct,errors,seconds_with_errors,longest_zero_ok_run_s,first_error_s,last_error_s,recovered_after_s
+trap (100% FARGATE_SPOT),"{""FARGATE_SPOT"": 4}",4,97,1940,1343,69.23,"{""503"": 597}",31,28,32.0,62.0,95.1
+fix (base 2 FARGATE + weight 1:3),"{""FARGATE"": 3, ""FARGATE_SPOT"": 3}",not run,,,,,,,,,,

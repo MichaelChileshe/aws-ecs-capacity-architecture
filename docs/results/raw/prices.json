@@ -1,0 +1,72 @@
+{
+ "region": "us-east-1",
+ "task": "0.5 vCPU / 1 GB",
+ "prices": {
+  "fargate_vcpu": {
+   "usd": 0.04048,
+   "unit": "hours",
+   "usagetype": "USE1-Fargate-vCPU-Hours:perCPU",
+   "description": "AWS Fargate - vCPU - US East (N.Virginia)"
+  },
+  "fargate_gb": {
+   "usd": 0.004445,
+   "unit": "hours",
+   "usagetype": "USE1-Fargate-GB-Hours",
+   "description": "AWS Fargate - Memory  - US East (N.Virginia)"
+  },
+  "fargate_arm_vcpu": {
+   "usd": 0.03238,
+   "unit": "hours",
+   "usagetype": "USE1-Fargate-ARM-vCPU-Hours:perCPU",
+   "description": "AWS Fargate - ARM - vCPU - US East (N. Virginia)"
+  },
+  "fargate_arm_gb": {
+   "usd": 0.00356,
+   "unit": "hours",
+   "usagetype": "USE1-Fargate-ARM-GB-Hours",
+   "description": "AWS Fargate - ARM - Memory - US East (N. Virginia)"
+  },
+  "spot_vcpu": null,
+  "spot_gb": null,
+  "ec2": {
+   "usd": 0.0336,
+   "unit": "Hrs",
+   "usagetype": "BoxUsage:t4g.medium",
+   "description": "$0.0336 per On Demand Linux t4g.medium Instance Hour"
+  },
+  "gp3": {
+   "usd": 0.08,
+   "unit": "GB-Mo",
+   "usagetype": "EBS:VolumeUsage.gp3",
+   "description": "$0.08 per GB-month of General Purpose (gp3) provisioned storage - US East (N. Virginia)"
+  },
+  "ipv4": {
+   "usd": 0.005,
+   "unit": "Hrs",
+   "usagetype": "USE1-PublicIPv4:InUseAddress",
+   "description": "$0.005 per In-use public IPv4 address per hour"
+  }
+ },
+ "per_1000_task_hours_usd": {
+  "FARGATE on-demand (x86_64)": 24.69,
+  "FARGATE on-demand (ARM64, reference)": 19.75,
+  "FARGATE_SPOT": null,
+  "EC2 t4g.medium on-demand, 2 tasks/instance (ENI-limited)": 18.44,
+  "EC2 t4g.medium if 3 tasks/instance fitted (no ENI limit)": 12.3
+ },
+ "public_ipv4_per_1000_task_hours_usd": {
+  "Fargate (1 address per task)": 5.0,
+  "EC2 (1 address per instance / 2 tasks)": 2.5
+ },
+ "tasks_per_instance": {
+  "by_eni": 2,
+  "by_cpu": 4,
+  "by_memory_approx": 3,
+  "used": 2
+ },
+ "fargate_spot_in_price_list": false,
+ "notes": [
+  "EC2 cost includes the 30 GB gp3 root volume; it assumes instances are fully packed (managed scaling with target capacity 100 aims for that); t4g in standard credit mode.",
+  "Fargate Spot prices change with spare capacity: check Cost Explorer (usage types containing SpotUsage-Fargate) the day after the build for what was actually charged."
+ ]
+}

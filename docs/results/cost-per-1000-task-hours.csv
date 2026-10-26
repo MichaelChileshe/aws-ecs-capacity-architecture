@@ -1,0 +1,6 @@
+option,usd_per_1000_task_hours
+FARGATE on-demand (x86_64),24.69
+"FARGATE on-demand (ARM64, reference)",19.75
+FARGATE_SPOT,
+"EC2 t4g.medium on-demand, 2 tasks/instance (ENI-limited)",18.44
+EC2 t4g.medium if 3 tasks/instance fitted (no ENI limit),12.3

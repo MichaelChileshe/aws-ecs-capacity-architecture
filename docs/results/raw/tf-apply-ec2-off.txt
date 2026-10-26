@@ -1,0 +1,683 @@
+Acquiring state lock. This may take a few moments...
+data.aws_availability_zones.available: Reading...
+aws_vpc.main: Refreshing state... [id=vpc-0ac51bf8f6efae5a3]
+data.aws_caller_identity.current: Reading...
+aws_cloudwatch_log_group.main: Refreshing state... [id=/ecs/mvelaphanda-routes]
+aws_iam_role.instance[0]: Refreshing state... [id=mvelaphanda-routes-ecs-instance]
+aws_service_discovery_http_namespace.main: Refreshing state... [id=ns-fuuyabo7zbssgbza]
+aws_iam_role.execution: Refreshing state... [id=mvelaphanda-routes-execution]
+aws_ecs_cluster.main: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:cluster/mvelaphanda-routes]
+data.aws_caller_identity.current: Read complete after 0s [id=<account-id>]
+aws_iam_role.routes_task: Refreshing state... [id=mvelaphanda-routes-routes-api-task]
+aws_iam_role.eta_task: Refreshing state... [id=mvelaphanda-routes-eta-engine-task]
+data.aws_availability_zones.available: Read complete after 1s [id=us-east-1]
+aws_iam_role_policy_attachment.instance_ecs[0]: Refreshing state... [id=mvelaphanda-routes-ecs-instance/arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role]
+aws_iam_role_policy_attachment.instance_ssm[0]: Refreshing state... [id=mvelaphanda-routes-ecs-instance/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+aws_iam_instance_profile.instance[0]: Refreshing state... [id=mvelaphanda-routes-ecs-instance]
+aws_iam_role_policy_attachment.execution: Refreshing state... [id=mvelaphanda-routes-execution/arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy]
+aws_ecs_task_definition.routes: Refreshing state... [id=mvelaphanda-routes-routes-api]
+aws_ecs_task_definition.eta: Refreshing state... [id=mvelaphanda-routes-eta-engine]
+aws_ecs_task_definition.eta_batch[0]: Refreshing state... [id=mvelaphanda-routes-eta-batch]
+aws_internet_gateway.main: Refreshing state... [id=igw-01cd28a1b6a9e0292]
+aws_security_group.loadgen: Refreshing state... [id=sg-0b3b05a0619cde649]
+aws_route_table.public: Refreshing state... [id=rtb-0d0805f30a414d55d]
+aws_subnet.public[0]: Refreshing state... [id=subnet-0a30cadd53d05b1cf]
+aws_subnet.public[1]: Refreshing state... [id=subnet-0f032701d0649eb26]
+aws_security_group.instances[0]: Refreshing state... [id=sg-0feb8c37f2492db79]
+aws_security_group.alb: Refreshing state... [id=sg-028bd1bece01d636e]
+aws_security_group.tasks: Refreshing state... [id=sg-0c476ab90f45859d6]
+aws_lb_target_group.routes: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:targetgroup/mvelaphanda-routes-api/80cc2c7266830c88]
+aws_vpc_security_group_egress_rule.loadgen_out: Refreshing state... [id=sgr-088bfc80577a8957a]
+aws_vpc_security_group_egress_rule.tasks_out: Refreshing state... [id=sgr-0a14f7e0855e39cb0]
+aws_vpc_security_group_ingress_rule.tasks_from_tasks: Refreshing state... [id=sgr-09fa26a86528613b2]
+aws_vpc_security_group_egress_rule.instances_out[0]: Refreshing state... [id=sgr-037062c4e58188da9]
+aws_launch_template.ecs[0]: Refreshing state... [id=lt-0bc94a8a154dfd9e0]
+aws_vpc_security_group_egress_rule.alb_to_tasks: Refreshing state... [id=sgr-08f529c10e15c6029]
+aws_vpc_security_group_ingress_rule.alb_http: Refreshing state... [id=sgr-0374b6cb4afce0047]
+aws_vpc_security_group_ingress_rule.tasks_from_alb: Refreshing state... [id=sgr-0faabe7c5506245b5]
+aws_lb.alb: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:loadbalancer/app/mvelaphanda-routes-alb/303ba8bb02e506f7]
+aws_route.internet: Refreshing state... [id=r-rtb-0d0805f30a414d55d1080289494]
+aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-071f63115acaf7466]
+aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0ae6381015633aa4b]
+aws_autoscaling_group.ecs[0]: Refreshing state... [id=mvelaphanda-routes-ecs]
+aws_ecs_task_definition.loadgen: Refreshing state... [id=mvelaphanda-routes-loadgen]
+aws_lb_listener.http: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:listener/app/mvelaphanda-routes-alb/303ba8bb02e506f7/024eab07d16db89d]
+aws_ecs_capacity_provider.ec2[0]: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:capacity-provider/mvelaphanda-routes-ec2]
+aws_ecs_cluster_capacity_providers.main: Refreshing state... [id=mvelaphanda-routes]
+aws_lb_listener_rule.block_admin: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:listener-rule/app/mvelaphanda-routes-alb/303ba8bb02e506f7/024eab07d16db89d/5837853f9bf77f8c]
+aws_ecs_service.eta_batch[0]: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch]
+aws_ecs_service.eta: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-engine]
+aws_ecs_service.routes: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/routes-api]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_autoscaling_group.ecs[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_autoscaling_group" "ecs" {
+      - arn                              = "arn:aws:autoscaling:us-east-1:<account-id>:autoScalingGroup:4c35c040-c816-4cf7-a404-58c9f32b3475:autoScalingGroupName/mvelaphanda-routes-ecs" -> null
+      - availability_zones               = [
+          - "us-east-1a",
+          - "us-east-1b",
+        ] -> null
+      - capacity_rebalance               = false -> null
+      - default_cooldown                 = 300 -> null
+      - default_instance_warmup          = 0 -> null
+      - desired_capacity                 = 4 -> null
+      - enabled_metrics                  = [] -> null
+      - force_delete                     = true -> null
+      - force_delete_warm_pool           = false -> null
+      - health_check_grace_period        = 300 -> null
+      - health_check_type                = "EC2" -> null
+      - id                               = "mvelaphanda-routes-ecs" -> null
+      - ignore_failed_scaling_activities = false -> null
+      - load_balancers                   = [] -> null
+      - max_instance_lifetime            = 0 -> null
+      - max_size                         = 4 -> null
+      - metrics_granularity              = "1Minute" -> null
+      - min_size                         = 0 -> null
+      - name                             = "mvelaphanda-routes-ecs" -> null
+      - predicted_capacity               = 0 -> null
+      - protect_from_scale_in            = false -> null
+      - region                           = "us-east-1" -> null
+      - service_linked_role_arn          = "arn:aws:iam::<account-id>:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling" -> null
+      - suspended_processes              = [] -> null
+      - target_group_arns                = [] -> null
+      - termination_policies             = [] -> null
+      - vpc_zone_identifier              = [
+          - "subnet-0a30cadd53d05b1cf",
+          - "subnet-0f032701d0649eb26",
+        ] -> null
+      - wait_for_capacity_timeout        = "10m" -> null
+      - warm_pool_size                   = 0 -> null
+        # (5 unchanged attributes hidden)
+
+      - availability_zone_distribution {
+          - capacity_distribution_strategy = "balanced-best-effort" -> null
+        }
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "default" -> null
+        }
+
+      - instance_lifecycle_policy {
+          - retention_triggers {
+              - terminate_hook_abandon = "terminate" -> null
+            }
+        }
+
+      - launch_template {
+          - id      = "lt-0bc94a8a154dfd9e0" -> null
+          - name    = "mvelaphanda-routes-ecs" -> null
+          - version = "1" -> null
+        }
+
+      - tag {
+          - key                 = "AmazonECSManaged" -> null
+          - propagate_at_launch = true -> null
+          - value               = "true" -> null
+        }
+      - tag {
+          - key                 = "Name" -> null
+          - propagate_at_launch = true -> null
+          - value               = "mvelaphanda-routes-ecs" -> null
+        }
+    }
+
+  # aws_ecs_capacity_provider.ec2[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_ecs_capacity_provider" "ec2" {
+      - arn      = "arn:aws:ecs:us-east-1:<account-id>:capacity-provider/mvelaphanda-routes-ec2" -> null
+      - id       = "arn:aws:ecs:us-east-1:<account-id>:capacity-provider/mvelaphanda-routes-ec2" -> null
+      - name     = "mvelaphanda-routes-ec2" -> null
+      - region   = "us-east-1" -> null
+      - tags     = {} -> null
+      - tags_all = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+        # (1 unchanged attribute hidden)
+
+      - auto_scaling_group_provider {
+          - auto_scaling_group_arn         = "arn:aws:autoscaling:us-east-1:<account-id>:autoScalingGroup:4c35c040-c816-4cf7-a404-58c9f32b3475:autoScalingGroupName/mvelaphanda-routes-ecs" -> null
+          - managed_draining               = "ENABLED" -> null
+          - managed_termination_protection = "DISABLED" -> null
+
+          - managed_scaling {
+              - instance_warmup_period    = 60 -> null
+              - maximum_scaling_step_size = 4 -> null
+              - minimum_scaling_step_size = 1 -> null
+              - status                    = "ENABLED" -> null
+              - target_capacity           = 100 -> null
+            }
+        }
+    }
+
+  # aws_ecs_cluster_capacity_providers.main will be updated in-place
+  ~ resource "aws_ecs_cluster_capacity_providers" "main" {
+      ~ capacity_providers = [
+          - "mvelaphanda-routes-ec2",
+            # (2 unchanged elements hidden)
+        ]
+        id                 = "mvelaphanda-routes"
+        # (2 unchanged attributes hidden)
+
+        # (1 unchanged block hidden)
+    }
+
+  # aws_ecs_service.eta_batch[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_ecs_service" "eta_batch" {
+      - arn                                = "arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch" -> null
+      - availability_zone_rebalancing      = "ENABLED" -> null
+      - cluster                            = "arn:aws:ecs:us-east-1:<account-id>:cluster/mvelaphanda-routes" -> null
+      - deployment_maximum_percent         = 200 -> null
+      - deployment_minimum_healthy_percent = 100 -> null
+      - desired_count                      = 6 -> null
+      - enable_ecs_managed_tags            = false -> null
+      - enable_execute_command             = false -> null
+      - force_new_deployment               = true -> null
+      - health_check_grace_period_seconds  = 0 -> null
+      - iam_role                           = "/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS" -> null
+      - id                                 = "arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch" -> null
+      - name                               = "eta-batch" -> null
+      - propagate_tags                     = "SERVICE" -> null
+      - region                             = "us-east-1" -> null
+      - scheduling_strategy                = "REPLICA" -> null
+      - tags                               = {} -> null
+      - tags_all                           = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+      - task_definition                    = "arn:aws:ecs:us-east-1:<account-id>:task-definition/mvelaphanda-routes-eta-batch:1" -> null
+      - triggers                           = {} -> null
+      - wait_for_steady_state              = false -> null
+        # (2 unchanged attributes hidden)
+
+      - capacity_provider_strategy {
+          - base              = 0 -> null
+          - capacity_provider = "mvelaphanda-routes-ec2" -> null
+          - weight            = 1 -> null
+        }
+
+      - deployment_circuit_breaker {
+          - enable   = true -> null
+          - rollback = true -> null
+        }
+
+      - deployment_configuration {
+          - bake_time_in_minutes = "0" -> null
+          - strategy             = "ROLLING" -> null
+        }
+
+      - deployment_controller {
+          - type = "ECS" -> null
+        }
+
+      - network_configuration {
+          - assign_public_ip = false -> null
+          - security_groups  = [
+              - "sg-0c476ab90f45859d6",
+            ] -> null
+          - subnets          = [
+              - "subnet-0a30cadd53d05b1cf",
+              - "subnet-0f032701d0649eb26",
+            ] -> null
+        }
+
+      - ordered_placement_strategy {
+          - field = "attribute:ecs.availability-zone" -> null
+          - type  = "spread" -> null
+        }
+      - ordered_placement_strategy {
+          - field = "memory" -> null
+          - type  = "binpack" -> null
+        }
+    }
+
+  # aws_ecs_task_definition.eta_batch[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_ecs_task_definition" "eta_batch" {
+      - arn                      = "arn:aws:ecs:us-east-1:<account-id>:task-definition/mvelaphanda-routes-eta-batch:1" -> null
+      - arn_without_revision     = "arn:aws:ecs:us-east-1:<account-id>:task-definition/mvelaphanda-routes-eta-batch" -> null
+      - container_definitions    = jsonencode(
+            [
+              - {
+                  - command                = [
+                      - "python3",
+                      - "-u",
+                      - "-c",
+                      - "import base64,os;exec(compile(base64.b64decode(os.environ['APP_B64']),'eta_engine.py','exec'))",
+                    ]
+                  - environment            = [
+                      - {
+                          - name  = "APP_B64"
+                          - value = "IiIiZXRhLWVuZ2luZTogdGhlIGludGVybmFsIHNlcnZpY2UgdGhhdCB0dXJucyBhIGRlcG90LXRvLWRlcG90IHJlcXVlc3QgaW50byBhIGRpc3RhbmNlIGFuZCBhbiBFVEEuCk9ubHkgcm91dGVzLWFwaSBjYWxscyBpdCwgdGhyb3VnaCBTZXJ2aWNlIENvbm5lY3QgKGRpc2NvdmVyeSBuYW1lICJldGEiLCBwb3J0IDgwODApLiBJdCBoYXMgbm8KbG9hZCBiYWxhbmNlciBhbmQgbm8gcHVibGljIGVudHJ5IHBvaW50LgoKR0VUIC9ldGE/ZnJvbT1KTkImdG89REJOIC0+IHsia20iOiAuLi4sICJldGFfbWludXRlcyI6IC4uLiwgImFuc3dlcmVkX2J5Ijoge3Rhc2ssIEFaLCBsYXVuY2ggdHlwZSwgcm9sZX19CkdFVCAvd2hvYW1pICAgICAgICAgICAgICAtPiB0aGUgSUFNIHJvbGUgdGhpcyB0YXNrJ3MgY29kZSBydW5zIGFzIChSb2xlQXJuIG9ubHksIG5ldmVyIGtleXMpCkdFVCAvaGVhbHRoICAgICAgICAgICAgICAtPiAyMDAgIm9rIiwgb3IgNTAzICJkcmFpbmluZyIgYWZ0ZXIgU0lHVEVSTQoKVGhlIHNhbWUgZmlsZSBydW5zIGFzIHRoZSAiZXRhLWJhdGNoIiBzZXJ2aWNlIG9uIHRoZSBFQzIgY2FwYWNpdHkgcHJvdmlkZXIgKG5pZ2h0bHkgcm91dGUKcmVjb21wdXRhdGlvbiB3b3JrZXJzIGluIHRoZSBzY2VuYXJpbykuIFB5dGhvbiBzdGFuZGFyZCBsaWJyYXJ5IG9ubHk7IGRlbGl2ZXJlZCBiYXNlNjQtZW5jb2RlZAppbiBBUFBfQjY0IGxpa2Ugcm91dGVzLWFwaS4gU0lHVEVSTSBoYW5kbGluZyBpcyB0aGUgc2FtZTogZHJhaW4sIHN0b3AgYWNjZXB0aW5nLCBmaW5pc2gsIGV4aXQgMC4KIiIiCmltcG9ydCBqc29uCmltcG9ydCBtYXRoCmltcG9ydCBvcwppbXBvcnQgc2lnbmFsCmltcG9ydCBzeXMKaW1wb3J0IHRocmVhZGluZwppbXBvcnQgdGltZQppbXBvcnQgdXJsbGliLnBhcnNlCmltcG9ydCB1cmxsaWIucmVxdWVzdApmcm9tIGh0dHAuc2VydmVyIGltcG9ydCBCYXNlSFRUUFJlcXVlc3RIYW5kbGVyLCBUaHJlYWRpbmdIVFRQU2VydmVyCgpTRVJWSUNFID0gb3MuZW52aXJvbi5nZXQoIlNFUlZJQ0VfTkFNRSIsICJldGEtZW5naW5lIikKUE9SVCA9IGludChvcy5lbnZpcm9uLmdldCgiUE9SVCIsICI4MDgwIikpCkRSQUlOX1NFQ09ORFMgPSBmbG9hdChvcy5lbnZpcm9uLmdldCgiRFJBSU5fU0VDT05EUyIsICI1IikpCgojIE12ZWxhcGhhbmRhIGRlcG90czogKGxhdGl0dWRlLCBsb25naXR1ZGUpCkRFUE9UUyA9IHsKICAgICJKTkIiOiAoLTI2LjIwNDEsIDI4LjA0NzMpLCAgICMgSm9oYW5uZXNidXJnIChDaXR5IERlZXApCiAgICAiUFRBIjogKC0yNS43NDc5LCAyOC4yMjkzKSwgICAjIFByZXRvcmlhCiAgICAiREJOIjogKC0yOS44NTg3LCAzMS4wMjE4KSwgICAjIER1cmJhbiBoYXJib3VyCiAgICAiQ1BUIjogKC0zMy45MjQ5LCAxOC40MjQxKSwgICAjIENhcGUgVG93bgogICAgIlBMWiI6ICgtMzMuOTYwOCwgMjUuNjAyMiksICAgIyBHcWViZXJoYQogICAgIkJGTiI6ICgtMjkuMDg1MiwgMjYuMTU5NiksICAgIyBCbG9lbWZvbnRlaW4KICAgICJFTFMiOiAoLTMzLjAxNTMsIDI3LjkxMTYpLCAgICMgRWFzdCBMb25kb24KICAgICJNQk8iOiAoLTI1LjQ3NTMsIDMwLjk2OTQpLCAgICMgTWJvbWJlbGEKfQoKc3RhdGUgPSB7ImRyYWluaW5nIjogRmFsc2UsICJpbl9mbGlnaHQiOiAwLCAic2VydmVkIjogMCwgInNpZ3Rlcm1fYXQiOiBOb25lfQpsb2NrID0gdGhyZWFkaW5nLkxvY2soKQpkcmFpbmVkID0gdGhyZWFkaW5nLkV2ZW50KCkKX2lkZW50aXR5ID0ge30KX3JvbGUgPSB7ImF0IjogMC4wLCAidmFsdWUiOiBOb25lfQoKCmRlZiBsb2coZXZlbnQsICoqa3cpOgogICAgcHJpbnQoanNvbi5kdW1wcyh7InQiOiByb3VuZCh0aW1lLnRpbWUoKSwgMyksICJzdmMiOiBTRVJWSUNFLCAiZXZlbnQiOiBldmVudCwgKiprd30pLCBmbHVzaD1UcnVlKQoKCmRlZiBfZ2V0X2pzb24odXJsLCB0aW1lb3V0PTEuMCk6CiAgICB3aXRoIHVybGxpYi5yZXF1ZXN0LnVybG9wZW4odXJsLCB0aW1lb3V0PXRpbWVvdXQpIGFzIHI6CiAgICAgICAgcmV0dXJuIGpzb24ubG9hZHMoci5yZWFkKCkuZGVjb2RlKCkpCgoKZGVmIGlkZW50aXR5KCk6CiAgICBpZiBub3QgX2lkZW50aXR5OgogICAgICAgIG1ldGEgPSBvcy5lbnZpcm9uLmdldCgiRUNTX0NPTlRBSU5FUl9NRVRBREFUQV9VUklfVjQiKQogICAgICAgIGluZm8gPSB7InRhc2tfaWQiOiAibG9jYWwiLCAiYXoiOiAibG9jYWwiLCAibGF1bmNoX3R5cGUiOiAibG9jYWwifQogICAgICAgIGlmIG1ldGE6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHQgPSBfZ2V0X2pzb24obWV0YSArICIvdGFzayIpCiAgICAgICAgICAgICAgICBpbmZvID0geyJ0YXNrX2lkIjogdC5nZXQoIlRhc2tBUk4iLCAiIikuc3BsaXQoIi8iKVstMV0sICJheiI6IHQuZ2V0KCJBdmFpbGFiaWxpdHlab25lIiwgIj8iKSwKICAgICAgICAgICAgICAgICAgICAgICAgImxhdW5jaF90eXBlIjogdC5nZXQoIkxhdW5jaFR5cGUiLCAiPyIpfQogICAgICAgICAgICBleGNlcHQgKE9TRXJyb3IsIFZhbHVlRXJyb3IpIGFzIGU6CiAgICAgICAgICAgICAgICBpbmZvWyJlcnJvciJdID0gZiJtZXRhZGF0YToge3R5cGUoZSkuX19uYW1lX199IgogICAgICAgICAgICAgICAgcmV0dXJuIGluZm8KICAgICAgICBfaWRlbnRpdHkudXBkYXRlKGluZm8pCiAgICByZXR1cm4gZGljdChfaWRlbnRpdHkpCgoKZGVmIHJvbGVfYXJuKCk6CiAgICAiIiJSb2xlQXJuIGZyb20gdGhlIGNvbnRhaW5lciBjcmVkZW50aWFscyBlbmRwb2ludCwgY2FjaGVkIGZvciA2MCBzLiBLZXlzIG5ldmVyIGxlYXZlIGhlcmUuIiIiCiAgICBpZiBfcm9sZVsidmFsdWUiXSBpcyBub3QgTm9uZSBhbmQgdGltZS50aW1lKCkgLSBfcm9sZVsiYXQiXSA8IDYwOgogICAgICAgIHJldHVybiBfcm9sZVsidmFsdWUiXQogICAgZnVsbCA9IG9zLmVudmlyb24uZ2V0KCJBV1NfQ09OVEFJTkVSX0NSRURFTlRJQUxTX0ZVTExfVVJJIikKICAgIHJlbCA9IG9zLmVudmlyb24uZ2V0KCJBV1NfQ09OVEFJTkVSX0NSRURFTlRJQUxTX1JFTEFUSVZFX1VSSSIpCiAgICBpZiBub3QgZnVsbCBhbmQgbm90IHJlbDoKICAgICAgICByZXR1cm4geyJyb2xlX2FybiI6IE5vbmUsICJub3RlIjogIm5vIHRhc2sgcm9sZSJ9CiAgICB0cnk6CiAgICAgICAgZG9jID0gX2dldF9qc29uKGZ1bGwgb3IgKCJodHRwOi8vMTY5LjI1NC4xNzAuMiIgKyByZWwpLCB0aW1lb3V0PTIuMCkKICAgICAgICB2YWwgPSB7InJvbGVfYXJuIjogZG9jLmdldCgiUm9sZUFybiIpfQogICAgZXhjZXB0IChPU0Vycm9yLCBWYWx1ZUVycm9yKSBhcyBlOgogICAgICAgIHJldHVybiB7InJvbGVfYXJuIjogTm9uZSwgIm5vdGUiOiBmImNyZWRlbnRpYWxzIGVuZHBvaW50OiB7dHlwZShlKS5fX25hbWVfX30ifQogICAgX3JvbGUudXBkYXRlKGF0PXRpbWUudGltZSgpLCB2YWx1ZT12YWwpCiAgICByZXR1cm4gdmFsCgoKZGVmIGVzdGltYXRlKHNyYywgZHN0KToKICAgIGEsIGIgPSBERVBPVFNbc3JjXSwgREVQT1RTW2RzdF0KICAgIGxhMSwgbG8xLCBsYTIsIGxvMiA9IG1hcChtYXRoLnJhZGlhbnMsICgqYSwgKmIpKQogICAgaCA9IG1hdGguc2luKChsYTIgLSBsYTEpIC8gMikgKiogMiArIG1hdGguY29zKGxhMSkgKiBtYXRoLmNvcyhsYTIpICogbWF0aC5zaW4oKGxvMiAtIGxvMSkgLyAyKSAqKiAyCiAgICBrbSA9IDIgKiA2MzcxICogbWF0aC5hc2luKG1hdGguc3FydChoKSkgKiAxLjI1ICAgICAgICAgICMgc3RyYWlnaHQgbGluZSB4IHJvYWQgZmFjdG9yCiAgICBob3VyID0gdGltZS5nbXRpbWUoKS50bV9ob3VyICsgMiAgICAgICAgICAgICAgICAgICAgICAgICMgU0FTVCA9IFVUQysyCiAgICBzcGVlZCA9IDYyIGlmIGhvdXIgJSAyNCBpbiAoNywgOCwgMTYsIDE3KSBlbHNlIDc4ICAgICAgICMgdHJ1Y2sga20vaCwgcGVhayB2cyBvZmYtcGVhawogICAgcmV0dXJuIHJvdW5kKGttLCAxKSwgcm91bmQoa20gLyBzcGVlZCAqIDYwICsgMjAsIDApICAgICAjICsyMCBtaW4gbG9hZGluZy9oYW5kb3ZlcgoKCmNsYXNzIEhhbmRsZXIoQmFzZUhUVFBSZXF1ZXN0SGFuZGxlcik6CiAgICBwcm90b2NvbF92ZXJzaW9uID0gIkhUVFAvMS4xIgogICAgc2VydmVyX3ZlcnNpb24gPSAiZXRhLWVuZ2luZS8xIgoKICAgIGRlZiBsb2dfbWVzc2FnZShzZWxmLCBmbXQsICphcmdzKToKICAgICAgICBwYXNzCgogICAgZGVmIHNlbmRfanNvbihzZWxmLCBjb2RlLCBvYmopOgogICAgICAgIGJvZHkgPSBqc29uLmR1bXBzKG9iaikuZW5jb2RlKCkKICAgICAgICBzZWxmLnNlbmRfcmVzcG9uc2UoY29kZSkKICAgICAgICBzZWxmLnNlbmRfaGVhZGVyKCJDb250ZW50LVR5cGUiLCAiYXBwbGljYXRpb24vanNvbiIpCiAgICAgICAgc2VsZi5zZW5kX2hlYWRlcigiQ29udGVudC1MZW5ndGgiLCBzdHIobGVuKGJvZHkpKSkKICAgICAgICBpZiBzdGF0ZVsiZHJhaW5pbmciXToKICAgICAgICAgICAgc2VsZi5zZW5kX2hlYWRlcigiQ29ubmVjdGlvbiIsICJjbG9zZSIpCiAgICAgICAgICAgIHNlbGYuY2xvc2VfY29ubmVjdGlvbiA9IFRydWUKICAgICAgICBzZWxmLmVuZF9oZWFkZXJzKCkKICAgICAgICBzZWxmLndmaWxlLndyaXRlKGJvZHkpCgogICAgZGVmIGRvX0dFVChzZWxmKToKICAgICAgICB3aXRoIGxvY2s6CiAgICAgICAgICAgIHN0YXRlWyJpbl9mbGlnaHQiXSArPSAxCiAgICAgICAgdHJ5OgogICAgICAgICAgICBzZWxmLmhhbmRsZV9nZXQoKQogICAgICAgIGZpbmFsbHk6CiAgICAgICAgICAgIHdpdGggbG9jazoKICAgICAgICAgICAgICAgIHN0YXRlWyJpbl9mbGlnaHQiXSAtPSAxCiAgICAgICAgICAgICAgICBzdGF0ZVsic2VydmVkIl0gKz0gMQoKICAgIGRlZiBoYW5kbGVfZ2V0KHNlbGYpOgogICAgICAgIHUgPSB1cmxsaWIucGFyc2UudXJsc3BsaXQoc2VsZi5wYXRoKQogICAgICAgIHEgPSBkaWN0KHVybGxpYi5wYXJzZS5wYXJzZV9xc2wodS5xdWVyeSkpCiAgICAgICAgbWUgPSB7InNlcnZpY2UiOiBTRVJWSUNFLCAqKmlkZW50aXR5KCksICJkcmFpbmluZyI6IHN0YXRlWyJkcmFpbmluZyJdfQogICAgICAgIGlmIHUucGF0aCA9PSAiL2hlYWx0aCI6CiAgICAgICAgICAgIHJldHVybiBzZWxmLnNlbmRfanNvbig1MDMgaWYgc3RhdGVbImRyYWluaW5nIl0gZWxzZSAyMDAsIHsic3RhdHVzIjogImRyYWluaW5nIiBpZiBzdGF0ZVsiZHJhaW5pbmciXSBlbHNlICJvayJ9KQogICAgICAgIGlmIHUucGF0aCA9PSAiL3dob2FtaSI6CiAgICAgICAgICAgIHJldHVybiBzZWxmLnNlbmRfanNvbigyMDAsIHsqKm1lLCAqKnJvbGVfYXJuKCksICJub3dfbXMiOiBpbnQodGltZS50aW1lKCkgKiAxMDAwKX0pCiAgICAgICAgaWYgdS5wYXRoID09ICIvZXRhIjoKICAgICAgICAgICAgc3JjLCBkc3QgPSBxLmdldCgiZnJvbSIsICJKTkIiKS51cHBlcigpLCBxLmdldCgidG8iLCAiREJOIikudXBwZXIoKQogICAgICAgICAgICBpZiBzcmMgbm90IGluIERFUE9UUyBvciBkc3Qgbm90IGluIERFUE9UUzoKICAgICAgICAgICAgICAgIHJldHVybiBzZWxmLnNlbmRfanNvbig0MDAsIHsiZXJyb3IiOiAidW5rbm93biBkZXBvdCIsICJkZXBvdHMiOiBzb3J0ZWQoREVQT1RTKSwgImFuc3dlcmVkX2J5IjogbWV9KQogICAgICAgICAgICBrbSwgbWludXRlcyA9IGVzdGltYXRlKHNyYywgZHN0KQogICAgICAgICAgICByZXR1cm4gc2VsZi5zZW5kX2pzb24oMjAwLCB7ImttIjoga20sICJldGFfbWludXRlcyI6IG1pbnV0ZXMsICJhbnN3ZXJlZF9ieSI6IHsqKm1lLCAqKnJvbGVfYXJuKCl9fSkKICAgICAgICByZXR1cm4gc2VsZi5zZW5kX2pzb24oNDA0LCB7ImVycm9yIjogIm5vdCBmb3VuZCIsICJwYXRoIjogdS5wYXRofSkKCgpjbGFzcyBTZXJ2ZXIoVGhyZWFkaW5nSFRUUFNlcnZlcik6CiAgICBkYWVtb25fdGhyZWFkcyA9IFRydWUKICAgIGFsbG93X3JldXNlX2FkZHJlc3MgPSBUcnVlCiAgICByZXF1ZXN0X3F1ZXVlX3NpemUgPSAxMjgKCgpkZWYgZHJhaW5fYW5kX3N0b3Aoc2VydmVyKToKICAgIGxvZygic2lndGVybSIsIGluX2ZsaWdodD1zdGF0ZVsiaW5fZmxpZ2h0Il0sIGRyYWluX3NlY29uZHM9RFJBSU5fU0VDT05EUykKICAgIHRpbWUuc2xlZXAoRFJBSU5fU0VDT05EUykKICAgIHNlcnZlci5zaHV0ZG93bigpCiAgICBkZWFkbGluZSA9IHRpbWUudGltZSgpICsgMTAKICAgIHdoaWxlIHN0YXRlWyJpbl9mbGlnaHQiXSA+IDAgYW5kIHRpbWUudGltZSgpIDwgZGVhZGxpbmU6CiAgICAgICAgdGltZS5zbGVlcCgwLjA1KQogICAgbG9nKCJzdG9wcGVkIiwgaW5fZmxpZ2h0X2xlZnQ9c3RhdGVbImluX2ZsaWdodCJdLCBzZXJ2ZWQ9c3RhdGVbInNlcnZlZCJdLAogICAgICAgIHNlY29uZHNfYWZ0ZXJfc2lndGVybT1yb3VuZCh0aW1lLnRpbWUoKSAtIHN0YXRlWyJzaWd0ZXJtX2F0Il0sIDIpKQogICAgZHJhaW5lZC5zZXQoKQoKCmRlZiBtYWluKCk6CiAgICBzZXJ2ZXIgPSBTZXJ2ZXIoKCIwLjAuMC4wIiwgUE9SVCksIEhhbmRsZXIpCgogICAgZGVmIG9uX3NpZ3Rlcm0oc2lnbnVtLCBmcmFtZSk6CiAgICAgICAgaWYgc3RhdGVbImRyYWluaW5nIl06CiAgICAgICAgICAgIHJldHVybgogICAgICAgIHN0YXRlWyJkcmFpbmluZyJdID0gVHJ1ZQogICAgICAgIHN0YXRlWyJzaWd0ZXJtX2F0Il0gPSB0aW1lLnRpbWUoKQogICAgICAgIHRocmVhZGluZy5UaHJlYWQodGFyZ2V0PWRyYWluX2FuZF9zdG9wLCBhcmdzPShzZXJ2ZXIsKSwgZGFlbW9uPVRydWUpLnN0YXJ0KCkKCiAgICBzaWduYWwuc2lnbmFsKHNpZ25hbC5TSUdURVJNLCBvbl9zaWd0ZXJtKQogICAgc2lnbmFsLnNpZ25hbChzaWduYWwuU0lHSU5ULCBvbl9zaWd0ZXJtKQogICAgbG9nKCJsaXN0ZW5pbmciLCBwb3J0PVBPUlQsIGRlcG90cz1sZW4oREVQT1RTKSwgcHl0aG9uPXN5cy52ZXJzaW9uLnNwbGl0KClbMF0pCiAgICBzZXJ2ZXIuc2VydmVfZm9yZXZlcihwb2xsX2ludGVydmFsPTAuMikKICAgIGRyYWluZWQud2FpdCgxNSkKICAgIHNlcnZlci5zZXJ2ZXJfY2xvc2UoKQogICAgc3lzLmV4aXQoMCkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgbWFpbigpCg=="
+                        },
+                      - {
+                          - name  = "PORT"
+                          - value = "8080"
+                        },
+                      - {
+                          - name  = "SERVICE_NAME"
+                          - value = "eta-batch"
+                        },
+                    ]
+                  - essential              = true
+                  - image                  = "public.ecr.aws/docker/library/python:3.12-slim"
+                  - logConfiguration       = {
+                      - logDriver = "awslogs"
+                      - options   = {
+                          - awslogs-group         = "/ecs/mvelaphanda-routes"
+                          - awslogs-region        = "us-east-1"
+                          - awslogs-stream-prefix = "eta-batch"
+                        }
+                    }
+                  - mountPoints            = []
+                  - name                   = "eta-batch"
+                  - portMappings           = [
+                      - {
+                          - containerPort = 8080
+                          - hostPort      = 8080
+                          - protocol      = "tcp"
+                        },
+                    ]
+                  - readonlyRootFilesystem = true
+                  - stopTimeout            = 30
+                  - systemControls         = []
+                  - user                   = "65534"
+                  - volumesFrom            = []
+                },
+            ]
+        ) -> null
+      - cpu                      = "256" -> null
+      - enable_fault_injection   = false -> null
+      - execution_role_arn       = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-execution" -> null
+      - family                   = "mvelaphanda-routes-eta-batch" -> null
+      - id                       = "mvelaphanda-routes-eta-batch" -> null
+      - memory                   = "512" -> null
+      - network_mode             = "awsvpc" -> null
+      - region                   = "us-east-1" -> null
+      - requires_compatibilities = [
+          - "EC2",
+        ] -> null
+      - revision                 = 1 -> null
+      - skip_destroy             = false -> null
+      - tags                     = {} -> null
+      - tags_all                 = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+      - task_role_arn            = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task" -> null
+      - track_latest             = false -> null
+        # (2 unchanged attributes hidden)
+    }
+
+  # aws_iam_instance_profile.instance[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_iam_instance_profile" "instance" {
+      - arn         = "arn:aws:iam::<account-id>:instance-profile/mvelaphanda-routes-ecs-instance" -> null
+      - create_date = "2026-10-26T10:57:24Z" -> null
+      - id          = "mvelaphanda-routes-ecs-instance" -> null
+      - name        = "mvelaphanda-routes-ecs-instance" -> null
+      - path        = "/" -> null
+      - role        = "mvelaphanda-routes-ecs-instance" -> null
+      - tags        = {} -> null
+      - tags_all    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+      - unique_id   = "AIPA3IFWBO65TAQPSE2IB" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role.instance[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_iam_role" "instance" {
+      - arn                   = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-ecs-instance" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-26T10:57:23Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "mvelaphanda-routes-ecs-instance" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+          - "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "mvelaphanda-routes-ecs-instance" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+      - unique_id             = "AROA3IFWBO65556GRMA5L" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # aws_iam_role_policy_attachment.instance_ecs[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_iam_role_policy_attachment" "instance_ecs" {
+      - id         = "mvelaphanda-routes-ecs-instance/arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role" -> null
+      - role       = "mvelaphanda-routes-ecs-instance" -> null
+    }
+
+  # aws_iam_role_policy_attachment.instance_ssm[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_iam_role_policy_attachment" "instance_ssm" {
+      - id         = "mvelaphanda-routes-ecs-instance/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - role       = "mvelaphanda-routes-ecs-instance" -> null
+    }
+
+  # aws_launch_template.ecs[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_launch_template" "ecs" {
+      - arn                                  = "arn:aws:ec2:us-east-1:<account-id>:launch-template/lt-0bc94a8a154dfd9e0" -> null
+      - default_version                      = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - id                                   = "lt-0bc94a8a154dfd9e0" -> null
+      - image_id                             = "ami-0a942f4655cf754cb" -> null
+      - instance_type                        = "t4g.medium" -> null
+      - latest_version                       = 1 -> null
+      - name                                 = "mvelaphanda-routes-ecs" -> null
+      - region                               = "us-east-1" -> null
+      - security_group_names                 = [] -> null
+      - tags                                 = {} -> null
+      - tags_all                             = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+      - user_data                            = "IyEvYmluL2Jhc2gKIyBCb290IHNjcmlwdCBmb3IgYW4gRUNTIGNvbnRhaW5lciBpbnN0YW5jZSAoRUNTLW9wdGltaXplZCBBbWF6b24gTGludXggMjAyMywgYXJtNjQpLCByZW5kZXJlZCBieQojIFRlcnJhZm9ybS4gSXQgdGVsbHMgdGhlIEVDUyBhZ2VudCB3aGljaCBjbHVzdGVyIHRvIGpvaW47IHRoZSBhZ2VudCBkb2VzIHRoZSByZXN0LgojICAgRUNTX0FXU1ZQQ19CTE9DS19JTURTOiB0YXNrcyAoYXdzdnBjIG1vZGUpIGNhbid0IHJlYWNoIHRoZSBpbnN0YW5jZSBtZXRhZGF0YSBzZXJ2aWNlLCBzbyBhCiMgICB0YXNrIGNhbiBuZXZlciBib3Jyb3cgdGhlIElOU1RBTkNFIHJvbGU7IGl0IG9ubHkgZXZlciBnZXRzIGl0cyBvd24gdGFzayByb2xlLgpjYXQgPj4gL2V0Yy9lY3MvZWNzLmNvbmZpZyA8PCdDT05GJwpFQ1NfQ0xVU1RFUj1tdmVsYXBoYW5kYS1yb3V0ZXMKRUNTX0FXU1ZQQ19CTE9DS19JTURTPXRydWUKRUNTX0VOQUJMRV9DT05UQUlORVJfTUVUQURBVEE9dHJ1ZQpDT05GCiMgU1NNIEFnZW50IGZvciBjb21tYW5kcyB3aXRob3V0IFNTSDogaW5zdGFsbGVkIG9ubHkgaWYgdGhpcyBBTUkgZG9lc24ndCBhbHJlYWR5IGhhdmUgaXQuCiMgTmV2ZXIgYWxsb3dlZCB0byBmYWlsIHRoZSBib290ICh0aGUgRUNTIHBhcnQgYWJvdmUgaXMgd2hhdCBtYXR0ZXJzKS4KKHJwbSAtcSBhbWF6b24tc3NtLWFnZW50ID4vZGV2L251bGwgMj4mMSB8fCBkbmYgaW5zdGFsbCAteSBhbWF6b24tc3NtLWFnZW50KSAmJiBzeXN0ZW1jdGwgZW5hYmxlIC0tbm93IGFtYXpvbi1zc20tYWdlbnQgfHwgdHJ1ZQo=" -> null
+      - vpc_security_group_ids               = [] -> null
+        # (7 unchanged attributes hidden)
+
+      - block_device_mappings {
+          - device_name  = "/dev/xvda" -> null
+            # (2 unchanged attributes hidden)
+
+          - ebs {
+              - delete_on_termination      = "true" -> null
+              - encrypted                  = "true" -> null
+              - iops                       = 0 -> null
+              - throughput                 = 0 -> null
+              - volume_initialization_rate = 0 -> null
+              - volume_size                = 30 -> null
+              - volume_type                = "gp3" -> null
+                # (2 unchanged attributes hidden)
+            }
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - iam_instance_profile {
+          - arn  = "arn:aws:iam::<account-id>:instance-profile/mvelaphanda-routes-ecs-instance" -> null
+            name = null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "required" -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - network_interfaces {
+          - associate_public_ip_address  = "true" -> null
+          - delete_on_termination        = "true" -> null
+          - device_index                 = 0 -> null
+          - ena_queue_count              = 0 -> null
+          - ipv4_address_count           = 0 -> null
+          - ipv4_addresses               = [] -> null
+          - ipv4_prefix_count            = 0 -> null
+          - ipv4_prefixes                = [] -> null
+          - ipv6_address_count           = 0 -> null
+          - ipv6_addresses               = [] -> null
+          - ipv6_prefix_count            = 0 -> null
+          - ipv6_prefixes                = [] -> null
+          - network_card_index           = 0 -> null
+          - security_groups              = [
+              - "sg-0feb8c37f2492db79",
+            ] -> null
+            # (7 unchanged attributes hidden)
+        }
+
+      - tag_specifications {
+          - resource_type = "instance" -> null
+          - tags          = {
+              - "Name"    = "mvelaphanda-routes-ecs"
+              - "Project" = "aws-ecs-capacity-architecture"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "volume" -> null
+          - tags          = {
+              - "Name"    = "mvelaphanda-routes-ecs"
+              - "Project" = "aws-ecs-capacity-architecture"
+            } -> null
+        }
+    }
+
+  # aws_security_group.instances[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_security_group" "instances" {
+      - arn                    = "arn:aws:ec2:us-east-1:<account-id>:security-group/sg-0feb8c37f2492db79" -> null
+      - description            = "ECS container instances: no inbound" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "ECS and SSM endpoints, image pulls, CloudWatch Logs"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0feb8c37f2492db79" -> null
+      - ingress                = [] -> null
+      - name                   = "mvelaphanda-routes-instances" -> null
+      - owner_id               = "<account-id>" -> null
+      - region                 = "us-east-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {} -> null
+      - tags_all               = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+      - vpc_id                 = "vpc-0ac51bf8f6efae5a3" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_vpc_security_group_egress_rule.instances_out[0] will be destroyed
+  # (because index [0] is out of range for count)
+  - resource "aws_vpc_security_group_egress_rule" "instances_out" {
+      - arn                    = "arn:aws:ec2:us-east-1:<account-id>:security-group-rule/sgr-037062c4e58188da9" -> null
+      - cidr_ipv4              = "0.0.0.0/0" -> null
+      - description            = "ECS and SSM endpoints, image pulls, CloudWatch Logs" -> null
+      - id                     = "sgr-037062c4e58188da9" -> null
+      - ip_protocol            = "-1" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-0feb8c37f2492db79" -> null
+      - security_group_rule_id = "sgr-037062c4e58188da9" -> null
+      - tags_all               = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-ecs-capacity-architecture"
+        } -> null
+    }
+
+Plan: 0 to add, 1 to change, 11 to destroy.
+
+Changes to Outputs:
+  - ec2           = {
+      - asg               = "mvelaphanda-routes-ecs"
+      - capacity_provider = "mvelaphanda-routes-ec2"
+      - instance_type     = "t4g.medium"
+      - launch_template   = "mvelaphanda-routes-ecs"
+    } -> null
+  ~ services      = {
+      ~ eta_batch = "eta-batch" -> null
+        # (2 unchanged attributes hidden)
+    }
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: 
+aws_iam_role_policy_attachment.instance_ssm[0]: Destroying... [id=mvelaphanda-routes-ecs-instance/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+aws_iam_role_policy_attachment.instance_ecs[0]: Destroying... [id=mvelaphanda-routes-ecs-instance/arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role]
+aws_vpc_security_group_egress_rule.instances_out[0]: Destroying... [id=sgr-037062c4e58188da9]
+aws_ecs_service.eta_batch[0]: Destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch]
+aws_iam_role_policy_attachment.instance_ssm[0]: Destruction complete after 1s
+aws_vpc_security_group_egress_rule.instances_out[0]: Destruction complete after 1s
+aws_iam_role_policy_attachment.instance_ecs[0]: Destruction complete after 3s
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 00m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 00m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 00m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 00m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 00m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 01m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 01m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 01m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 01m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 01m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 01m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 02m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 02m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 02m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 02m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 02m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 02m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 03m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 03m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 03m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 03m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 03m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 03m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 04m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 04m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 04m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 04m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 04m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 04m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 05m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 05m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 05m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 05m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 05m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 05m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 06m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 06m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 06m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 06m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 06m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 06m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 07m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 07m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 07m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 07m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 07m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 07m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 08m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 08m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 08m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 08m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 08m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 08m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 09m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 09m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 09m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 09m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 09m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 09m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 10m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 10m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 10m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 10m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 10m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 10m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 11m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 11m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 11m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 11m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 11m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 11m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 12m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 12m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 12m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 12m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 12m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 12m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 13m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 13m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 13m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 13m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 13m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 13m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 14m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 14m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 14m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 14m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 14m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 14m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 15m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 15m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 15m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 15m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 15m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 15m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 16m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 16m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 16m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 16m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 16m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 16m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 17m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 17m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 17m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 17m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 17m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 17m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 18m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 18m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 18m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 18m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 18m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 18m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 19m00s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 19m10s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 19m20s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 19m30s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 19m40s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 19m50s elapsed]
+aws_ecs_service.eta_batch[0]: Still destroying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch, 20m00s elapsed]
+
+Error: waiting for ECS Service (arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-batch) delete: timeout while waiting for state to become 'INACTIVE' (last state: 'DRAINING', timeout: 20m0s): operation error ECS: DescribeServices, https response error StatusCode: 0, RequestID: , canceled, context deadline exceeded
+
+Releasing state lock. This may take a few moments...

@@ -1,0 +1,144 @@
+{
+ "service_updated_utc": "2026-10-26T11:05:27.601Z",
+ "desired_tasks": 6,
+ "tasks_running": 6,
+ "asg_desired_steps": [
+  2,
+  3
+ ],
+ "launch_activities": [
+  {
+   "start_s": -55.6,
+   "end_s": -51.6,
+   "status": "Successful",
+   "description": "Launching a new EC2 instance: i-053047b7ed6926254"
+  },
+  {
+   "start_s": -43.7,
+   "end_s": -44.6,
+   "status": "Failed",
+   "description": "Launching a new EC2 instance.  Status Reason: We currently do not have sufficien"
+  },
+  {
+   "start_s": -24.7,
+   "end_s": -25.6,
+   "status": "Failed",
+   "description": "Launching a new EC2 instance.  Status Reason: We currently do not have sufficien"
+  },
+  {
+   "start_s": -5.6,
+   "end_s": -6.6,
+   "status": "Failed",
+   "description": "Launching a new EC2 instance.  Status Reason: We currently do not have sufficien"
+  },
+  {
+   "start_s": 13.1,
+   "end_s": 12.4,
+   "status": "Failed",
+   "description": "Launching a new EC2 instance.  Status Reason: We currently do not have sufficien"
+  },
+  {
+   "start_s": 31.4,
+   "end_s": 31.4,
+   "status": "Failed",
+   "description": "Launching a new EC2 instance.  Status Reason: We currently do not have sufficien"
+  },
+  {
+   "start_s": 47.8,
+   "end_s": 114.4,
+   "status": "Successful",
+   "description": "Launching a new EC2 instance: i-0304bbf46938177e9"
+  },
+  {
+   "start_s": 59.6,
+   "end_s": 59.4,
+   "status": "Failed",
+   "description": "Launching a new EC2 instance.  Status Reason: We currently do not have sufficien"
+  }
+ ],
+ "first_launch_s": -55.6,
+ "first_registered_s": -35.4,
+ "all_registered_s": 71.7,
+ "first_task_running_s": -8.9,
+ "all_tasks_running_s": 108.2,
+ "instances": [
+  {
+   "instance": "i-0bab7671e385cd2c6",
+   "az": "us-east-1b",
+   "status": "ACTIVE",
+   "registered_at": "2026-10-26T13:04:52.167000+02:00",
+   "tasks": 2,
+   "registered_cpu_mem": {
+    "CPU": 2048,
+    "MEMORY": 3835
+   },
+   "remaining_cpu_mem": {
+    "CPU": 1536,
+    "MEMORY": 2811
+   }
+  },
+  {
+   "instance": "i-053047b7ed6926254",
+   "az": "us-east-1b",
+   "status": "ACTIVE",
+   "registered_at": "2026-10-26T13:04:55.031000+02:00",
+   "tasks": 2,
+   "registered_cpu_mem": {
+    "CPU": 2048,
+    "MEMORY": 3835
+   },
+   "remaining_cpu_mem": {
+    "CPU": 1536,
+    "MEMORY": 2811
+   }
+  },
+  {
+   "instance": "i-0304bbf46938177e9",
+   "az": "us-east-1b",
+   "status": "ACTIVE",
+   "registered_at": "2026-10-26T13:06:39.276000+02:00",
+   "tasks": 2,
+   "registered_cpu_mem": {
+    "CPU": 2048,
+    "MEMORY": 3835
+   },
+   "remaining_cpu_mem": {
+    "CPU": 1536,
+    "MEMORY": 2811
+   }
+  }
+ ],
+ "tasks_per_az": {
+  "us-east-1b": 6
+ },
+ "capacity_provider_reservation": [
+  {
+   "t": "2026-10-26T13:00:00+02:00",
+   "max": 100.0
+  },
+  {
+   "t": "2026-10-26T13:01:00+02:00",
+   "max": 100.0
+  },
+  {
+   "t": "2026-10-26T13:02:00+02:00",
+   "max": 100.0
+  },
+  {
+   "t": "2026-10-26T13:03:00+02:00",
+   "max": 200.0
+  },
+  {
+   "t": "2026-10-26T13:04:00+02:00",
+   "max": 100.0
+  },
+  {
+   "t": "2026-10-26T13:05:00+02:00",
+   "max": 300.0
+  },
+  {
+   "t": "2026-10-26T13:06:00+02:00",
+   "max": 200.0
+  }
+ ]
+}

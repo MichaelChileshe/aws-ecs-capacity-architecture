@@ -1,0 +1,4 @@
+run,profile_rps_seconds,sent,ok,availability_pct,errors,p50_ms,p90_ms,p99_ms
+baseline,20:120,2400,2400,100.0,{},5.6,7.2,29.1
+spot-trap,20:300,6000,5403,90.05,"{""503"": 597}",5.7,7.1,24.0
+scale,"5:120,50:420",21600,21600,100.0,{},6.2,51.2,93.3

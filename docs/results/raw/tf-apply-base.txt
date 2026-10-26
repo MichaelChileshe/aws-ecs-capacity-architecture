@@ -1,0 +1,152 @@
+Acquiring state lock. This may take a few moments...
+aws_iam_role.routes_task: Creating...
+aws_service_discovery_http_namespace.main: Creating...
+aws_iam_role.execution: Creating...
+aws_vpc.main: Creating...
+aws_cloudwatch_log_group.main: Creating...
+aws_ecs_cluster.main: Creating...
+aws_iam_role.eta_task: Creating...
+aws_iam_role.eta_task: Creation complete after 2s [id=mvelaphanda-routes-eta-engine-task]
+aws_cloudwatch_log_group.main: Creation complete after 3s [id=/ecs/mvelaphanda-routes]
+aws_iam_role.execution: Creation complete after 3s [id=mvelaphanda-routes-execution]
+aws_iam_role_policy_attachment.execution: Creating...
+aws_ecs_task_definition.eta: Creating...
+aws_iam_role.routes_task: Creation complete after 3s [id=mvelaphanda-routes-routes-api-task]
+aws_ecs_task_definition.routes: Creating...
+aws_iam_role_policy_attachment.execution: Creation complete after 1s [id=mvelaphanda-routes-execution/arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy]
+aws_ecs_task_definition.eta: Creation complete after 2s [id=mvelaphanda-routes-eta-engine]
+aws_vpc.main: Creation complete after 6s [id=vpc-0ac51bf8f6efae5a3]
+aws_route_table.public: Creating...
+aws_internet_gateway.main: Creating...
+aws_subnet.public[1]: Creating...
+aws_security_group.alb: Creating...
+aws_subnet.public[0]: Creating...
+aws_lb_target_group.routes: Creating...
+aws_security_group.tasks: Creating...
+aws_ecs_task_definition.routes: Creation complete after 3s [id=mvelaphanda-routes-routes-api]
+aws_security_group.loadgen: Creating...
+aws_internet_gateway.main: Creation complete after 2s [id=igw-01cd28a1b6a9e0292]
+aws_route_table.public: Creation complete after 3s [id=rtb-0d0805f30a414d55d]
+aws_route.internet: Creating...
+aws_service_discovery_http_namespace.main: Still creating... [00m10s elapsed]
+aws_ecs_cluster.main: Still creating... [00m10s elapsed]
+aws_security_group.tasks: Creation complete after 5s [id=sg-0c476ab90f45859d6]
+aws_security_group.alb: Creation complete after 5s [id=sg-028bd1bece01d636e]
+aws_vpc_security_group_egress_rule.tasks_out: Creating...
+aws_vpc_security_group_ingress_rule.tasks_from_tasks: Creating...
+aws_vpc_security_group_ingress_rule.alb_http: Creating...
+aws_security_group.loadgen: Creation complete after 5s [id=sg-0b3b05a0619cde649]
+aws_vpc_security_group_egress_rule.alb_to_tasks: Creating...
+aws_route.internet: Creation complete after 2s [id=r-rtb-0d0805f30a414d55d1080289494]
+aws_vpc_security_group_ingress_rule.tasks_from_alb: Creating...
+aws_vpc_security_group_ingress_rule.alb_http: Creation complete after 0s [id=sgr-0374b6cb4afce0047]
+aws_vpc_security_group_egress_rule.tasks_out: Creation complete after 0s [id=sgr-0a14f7e0855e39cb0]
+aws_vpc_security_group_egress_rule.loadgen_out: Creating...
+aws_vpc_security_group_ingress_rule.tasks_from_tasks: Creation complete after 0s [id=sgr-09fa26a86528613b2]
+aws_vpc_security_group_ingress_rule.tasks_from_alb: Creation complete after 1s [id=sgr-0faabe7c5506245b5]
+aws_vpc_security_group_egress_rule.loadgen_out: Creation complete after 1s [id=sgr-088bfc80577a8957a]
+aws_ecs_cluster.main: Creation complete after 12s [id=arn:aws:ecs:us-east-1:<account-id>:cluster/mvelaphanda-routes]
+aws_vpc_security_group_egress_rule.alb_to_tasks: Creation complete after 1s [id=sgr-08f529c10e15c6029]
+aws_lb_target_group.routes: Creation complete after 7s [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:targetgroup/mvelaphanda-routes-api/80cc2c7266830c88]
+aws_subnet.public[1]: Still creating... [00m10s elapsed]
+aws_subnet.public[0]: Still creating... [00m10s elapsed]
+aws_subnet.public[1]: Creation complete after 13s [id=subnet-0f032701d0649eb26]
+aws_subnet.public[0]: Creation complete after 13s [id=subnet-0a30cadd53d05b1cf]
+aws_route_table_association.public[1]: Creating...
+aws_route_table_association.public[0]: Creating...
+aws_ecs_cluster_capacity_providers.main: Creating...
+aws_lb.alb: Creating...
+aws_service_discovery_http_namespace.main: Still creating... [00m20s elapsed]
+aws_route_table_association.public[1]: Creation complete after 1s [id=rtbassoc-071f63115acaf7466]
+aws_route_table_association.public[0]: Creation complete after 1s [id=rtbassoc-0ae6381015633aa4b]
+aws_ecs_cluster_capacity_providers.main: Still creating... [00m10s elapsed]
+aws_lb.alb: Still creating... [00m10s elapsed]
+aws_service_discovery_http_namespace.main: Still creating... [00m30s elapsed]
+aws_ecs_cluster_capacity_providers.main: Creation complete after 15s [id=mvelaphanda-routes]
+aws_lb.alb: Still creating... [00m20s elapsed]
+aws_service_discovery_http_namespace.main: Still creating... [00m40s elapsed]
+aws_service_discovery_http_namespace.main: Creation complete after 41s [id=ns-fuuyabo7zbssgbza]
+aws_ecs_service.eta: Creating...
+aws_ecs_service.eta: Creation complete after 4s [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-engine]
+aws_lb.alb: Still creating... [00m30s elapsed]
+aws_lb.alb: Still creating... [00m40s elapsed]
+aws_lb.alb: Still creating... [00m50s elapsed]
+aws_lb.alb: Still creating... [01m00s elapsed]
+aws_lb.alb: Still creating... [01m10s elapsed]
+aws_lb.alb: Still creating... [01m20s elapsed]
+aws_lb.alb: Still creating... [01m30s elapsed]
+aws_lb.alb: Still creating... [01m40s elapsed]
+aws_lb.alb: Still creating... [01m50s elapsed]
+aws_lb.alb: Still creating... [02m00s elapsed]
+aws_lb.alb: Still creating... [02m10s elapsed]
+aws_lb.alb: Creation complete after 2m19s [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:loadbalancer/app/mvelaphanda-routes-alb/303ba8bb02e506f7]
+aws_ecs_task_definition.loadgen: Creating...
+aws_lb_listener.http: Creating...
+aws_ecs_task_definition.loadgen: Creation complete after 2s [id=mvelaphanda-routes-loadgen]
+aws_lb_listener.http: Creation complete after 2s [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:listener/app/mvelaphanda-routes-alb/303ba8bb02e506f7/024eab07d16db89d]
+aws_lb_listener_rule.block_admin: Creating...
+aws_ecs_service.routes: Creating...
+aws_lb_listener_rule.block_admin: Creation complete after 1s [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:listener-rule/app/mvelaphanda-routes-alb/303ba8bb02e506f7/024eab07d16db89d/5837853f9bf77f8c]
+aws_ecs_service.routes: Creation complete after 2s [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/routes-api]
+Releasing state lock. This may take a few moments...
+
+Apply complete! Resources: 34 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+alb_dns = "mvelaphanda-routes-alb-338735080.us-east-1.elb.amazonaws.com"
+app_sha256 = {
+  "eta_engine" = "9abddb5371bd85df"
+  "loadgen" = "2ce6d8af280a1de7"
+  "routes_api" = "913b95826a3dca1d"
+}
+azs = tolist([
+  "us-east-1a",
+  "us-east-1b",
+])
+cluster = "mvelaphanda-routes"
+instance_type = "t4g.medium"
+loadgen = {
+  "log_group" = "/ecs/mvelaphanda-routes"
+  "security_group" = "sg-0b3b05a0619cde649"
+  "subnets" = [
+    "subnet-0a30cadd53d05b1cf",
+    "subnet-0f032701d0649eb26",
+  ]
+  "task_definition" = "mvelaphanda-routes-loadgen"
+}
+namespace = {
+  "id" = "ns-fuuyabo7zbssgbza"
+  "name" = "mvelaphanda-routes"
+}
+roles = {
+  "eta_engine" = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task"
+  "execution" = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-execution"
+  "routes_api" = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-routes-api-task"
+}
+routes_mode = {
+  "desired" = 2
+  "mode" = "fargate"
+  "strategy" = [
+    {
+      "base" = 0
+      "cp" = "FARGATE"
+      "weight" = 1
+    },
+  ]
+}
+services = {
+  "eta" = "eta-engine"
+  "eta_batch" = null
+  "routes" = "routes-api"
+}
+target_groups = {
+  "alb" = "arn:aws:elasticloadbalancing:us-east-1:<account-id>:targetgroup/mvelaphanda-routes-api/80cc2c7266830c88"
+  "nlb" = null
+}
+task_size = {
+  "cpu" = 512
+  "ec2_cpu" = 256
+  "ec2_memory" = 512
+  "memory" = 1024
+}

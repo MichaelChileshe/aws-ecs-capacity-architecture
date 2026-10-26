@@ -1,0 +1,142 @@
+{
+ "taken_utc": "2026-10-26T10:29:34.129Z",
+ "cluster": "mvelaphanda-routes",
+ "routes_mode": {
+  "desired": 4,
+  "mode": "spot",
+  "strategy": [
+   {
+    "base": 0,
+    "cp": "FARGATE_SPOT",
+    "weight": 1
+   }
+  ]
+ },
+ "services": {
+  "eta-engine": {
+   "desired": 2,
+   "running": 2,
+   "pending": 0,
+   "strategy": [
+    {
+     "cp": "FARGATE",
+     "base": 0,
+     "weight": 1
+    }
+   ],
+   "deployments": [
+    {
+     "status": "PRIMARY",
+     "rollout": "COMPLETED",
+     "desired": 2,
+     "running": 2,
+     "pending": 0
+    }
+   ],
+   "split": {
+    "FARGATE": 2
+   },
+   "tasks": [
+    {
+     "task": "c4e1381ef1e0478c80dde4afe16b9308",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:07:31.480000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "c83859c53eca46db97697d9821ecf152",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:07:02.280000+02:00",
+     "container_instance": null
+    }
+   ],
+   "last_event": "(service eta-engine) has reached a steady state."
+  },
+  "routes-api": {
+   "desired": 4,
+   "running": 4,
+   "pending": 0,
+   "strategy": [
+    {
+     "cp": "FARGATE_SPOT",
+     "base": 0,
+     "weight": 1
+    }
+   ],
+   "deployments": [
+    {
+     "status": "PRIMARY",
+     "rollout": "COMPLETED",
+     "desired": 4,
+     "running": 4,
+     "pending": 0
+    }
+   ],
+   "split": {
+    "FARGATE_SPOT": 4
+   },
+   "tasks": [
+    {
+     "task": "1a92fb42cb5049f1abdaa51bd6828920",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:26:27.291000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "e508d133976c4e2ea5806c12be8b5167",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:27:00.363000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "01005edd44864d70b130e274adbaf60d",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:26:57.858000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "74a0c4921f3242b192b5b21a2f24e58a",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:27:00.167000+02:00",
+     "container_instance": null
+    }
+   ],
+   "last_event": "(service routes-api) has reached a steady state."
+  }
+ },
+ "target_groups": {
+  "alb": {
+   "healthy": 4
+  }
+ }
+}

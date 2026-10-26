@@ -1,0 +1,130 @@
+{
+ "taken_utc": "2026-10-26T12:34:10.855Z",
+ "cluster": "mvelaphanda-routes",
+ "routes_mode": {
+  "desired": 2,
+  "mode": "mixed",
+  "strategy": [
+   {
+    "base": 2,
+    "cp": "FARGATE",
+    "weight": 1
+   },
+   {
+    "base": 0,
+    "cp": "FARGATE_SPOT",
+    "weight": 3
+   }
+  ]
+ },
+ "services": {
+  "eta-engine": {
+   "desired": 2,
+   "running": 2,
+   "pending": 0,
+   "strategy": [
+    {
+     "cp": "FARGATE",
+     "base": 0,
+     "weight": 1
+    }
+   ],
+   "deployments": [
+    {
+     "status": "PRIMARY",
+     "rollout": "COMPLETED",
+     "desired": 2,
+     "running": 2,
+     "pending": 0
+    }
+   ],
+   "split": {
+    "FARGATE": 2
+   },
+   "tasks": [
+    {
+     "task": "c4e1381ef1e0478c80dde4afe16b9308",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:07:31.480000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "c83859c53eca46db97697d9821ecf152",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:07:02.280000+02:00",
+     "container_instance": null
+    }
+   ],
+   "last_event": "(service eta-engine) has reached a steady state."
+  },
+  "routes-api": {
+   "desired": 2,
+   "running": 2,
+   "pending": 0,
+   "strategy": [
+    {
+     "cp": "FARGATE",
+     "base": 2,
+     "weight": 1
+    },
+    {
+     "cp": "FARGATE_SPOT",
+     "base": 0,
+     "weight": 3
+    }
+   ],
+   "deployments": [
+    {
+     "status": "PRIMARY",
+     "rollout": "COMPLETED",
+     "desired": 2,
+     "running": 2,
+     "pending": 0
+    }
+   ],
+   "split": {
+    "FARGATE": 2
+   },
+   "tasks": [
+    {
+     "task": "a6ae47151be3477c9624312b8be6419e",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T14:31:42.849000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "34e24ae916994861ab2d65528310f5a7",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T14:30:57.617000+02:00",
+     "container_instance": null
+    }
+   ],
+   "last_event": "(service routes-api) has reached a steady state."
+  }
+ },
+ "target_groups": {
+  "alb": {
+   "healthy": 2
+  }
+ }
+}

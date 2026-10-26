@@ -1,0 +1,16 @@
+eta-batch: desired 6, service updated at 2026-10-26T11:05:27.601Z (AWS time; the clock starts there)
+  11:06:03  ASG desired 2  InService 2  registered in ECS 2  tasks {'RUNNING': 4, 'PROVISIONING': 8}
+  11:06:29  ASG desired 3  InService 2  registered in ECS 2  tasks {'RUNNING': 4, 'PROVISIONING': 8}
+  11:06:55  ASG desired 3  InService 3  registered in ECS 3  tasks {'RUNNING': 4, 'PROVISIONING': 8}
+  11:07:21  ASG desired 3  InService 3  registered in ECS 3  tasks {'RUNNING': 6, 'PROVISIONING': 6}
+
+== EC2 capacity provider scale-out (seconds after the service update)
+  ASG desired went 2 -> 3; launches: +-55.6s, +-43.7s, +-24.7s, +-5.6s, +13.1s, +31.4s, +47.8s, +59.6s
+  first instance registered in ECS +-35.4 s, all +71.7 s
+  first task RUNNING +-8.9 s, all 6 RUNNING +108.2 s
+  i-0bab7671e385cd2c6  us-east-1b  tasks 2  registered CPU/MEM {'CPU': 2048, 'MEMORY': 3835}  remaining {'CPU': 1536, 'MEMORY': 2811}
+  i-053047b7ed6926254  us-east-1b  tasks 2  registered CPU/MEM {'CPU': 2048, 'MEMORY': 3835}  remaining {'CPU': 1536, 'MEMORY': 2811}
+  i-0304bbf46938177e9  us-east-1b  tasks 2  registered CPU/MEM {'CPU': 2048, 'MEMORY': 3835}  remaining {'CPU': 1536, 'MEMORY': 2811}
+  tasks per AZ: {'us-east-1b': 6}
+  CapacityProviderReservation (max per minute): [100.0, 100.0, 100.0, 200.0, 100.0, 300.0, 200.0]
+saved /home/michael/ecs-capacity/build/results/ec2-scaleout.json

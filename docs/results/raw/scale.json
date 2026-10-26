@@ -1,0 +1,87 @@
+{
+ "profile": "5:120,50:420",
+ "min": 2,
+ "max": 6,
+ "peak_desired": 6,
+ "load_start_utc": "2026-10-26T12:39:14.000Z",
+ "load_step_utc": "2026-10-26T12:41:14.000Z",
+ "load_end_utc": "2026-10-26T12:48:14.000Z",
+ "first_scale_out_after_step_s": 292.0,
+ "peak_running_after_step_s": 365.0,
+ "first_scale_in_after_load_end_s": 1015.0,
+ "back_to_min_after_load_end_s": 1409.0,
+ "activities": [
+  {
+   "start_utc": "2026-10-26T12:46:06.277Z",
+   "since_step_s": 292.0,
+   "since_load_end_s": -128.0,
+   "status": "Successful",
+   "description": "Setting desired count to 6.",
+   "direction": "out"
+  },
+  {
+   "start_utc": "2026-10-26T13:05:09.203Z",
+   "since_step_s": 1435.0,
+   "since_load_end_s": 1015.0,
+   "status": "Successful",
+   "description": "Setting desired count to 5.",
+   "direction": "in"
+  },
+  {
+   "start_utc": "2026-10-26T13:07:09.186Z",
+   "since_step_s": 1555.0,
+   "since_load_end_s": 1135.0,
+   "status": "Successful",
+   "description": "Setting desired count to 4.",
+   "direction": "in"
+  },
+  {
+   "start_utc": "2026-10-26T13:09:09.202Z",
+   "since_step_s": 1675.0,
+   "since_load_end_s": 1255.0,
+   "status": "Successful",
+   "description": "Setting desired count to 3.",
+   "direction": "in"
+  },
+  {
+   "start_utc": "2026-10-26T13:11:09.205Z",
+   "since_step_s": 1795.0,
+   "since_load_end_s": 1375.0,
+   "status": "Successful",
+   "description": "Setting desired count to 2.",
+   "direction": "in"
+  }
+ ],
+ "alarms": [
+  {
+   "name": "igh-8b482b9c-d0a1-4c8c-b4d4-d219ddae2481",
+   "metric": "RequestCountPerTarget",
+   "comparison": "GreaterThanThreshold",
+   "threshold": 300.0,
+   "period_s": 60,
+   "evaluation_periods": 3,
+   "datapoints_to_alarm": null,
+   "state": "OK"
+  },
+  {
+   "name": "Low-0fe773ec-c7ee-435b-a3af-7687e351328c",
+   "metric": "RequestCountPerTarget",
+   "comparison": "LessThanThreshold",
+   "threshold": 270.0,
+   "period_s": 60,
+   "evaluation_periods": 15,
+   "datapoints_to_alarm": null,
+   "state": "ALARM"
+  }
+ ],
+ "loadgen": {
+  "sent": 21600,
+  "ok": 21600,
+  "err": 0,
+  "errors": {},
+  "availability_pct": 100.0,
+  "p50": 6.2,
+  "p90": 51.2,
+  "p99": 93.3
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "label": "spot-trap",
+ "url": "http://mvelaphanda-routes-alb-338735080.us-east-1.elb.amazonaws.com/route?from=JNB&to=DBN",
+ "profile": "20:300",
+ "start": 1793010730.0,
+ "end": 1793011029.957174,
+ "seconds": 300,
+ "sent": 6000,
+ "ok": 5403,
+ "err": 597,
+ "errors": {
+  "503": 597
+ },
+ "availability_pct": 90.05,
+ "p50": 5.7,
+ "p90": 7.1,
+ "p99": 24.0,
+ "max": 3060.3,
+ "first_err_t": 1793010930.0,
+ "last_err_t": 1793010960.0,
+ "task_id": "046e0a78a7f54cadb358cd07cd15d840",
+ "seconds_logged": 300,
+ "exit_code": 0,
+ "complete": true
+}

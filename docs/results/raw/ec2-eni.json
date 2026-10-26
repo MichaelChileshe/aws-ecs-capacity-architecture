@@ -1,0 +1,17 @@
+{
+ "instance_type": "t4g.medium",
+ "max_network_interfaces": 3,
+ "vcpus": 2,
+ "memory_mib": 4096,
+ "awsvpcTrunking_setting": "disabled",
+ "task_cpu": 256,
+ "task_memory": 512,
+ "tasks_per_instance_by_eni": 2,
+ "tasks_per_instance_by_cpu": 8,
+ "tasks_per_instance_by_memory_approx": 7,
+ "tasks_per_instance": 2,
+ "limited_by": "ENI",
+ "tasks": 6,
+ "instances_needed": 3,
+ "instances_needed_without_eni_limit": 1
+}

@@ -1,0 +1,21 @@
+Price List API, us-east-1, task = 0.5 vCPU / 1 GB
+  fargate_vcpu  US$0.040480 per hours  (USE1-Fargate-vCPU-Hours:perCPU)
+  fargate_gb    US$0.004445 per hours  (USE1-Fargate-GB-Hours)
+  spot_vcpu     not in the Price List API
+  spot_gb       not in the Price List API
+  ec2           US$0.033600 per Hrs  (BoxUsage:t4g.medium)
+  gp3           US$0.080000 per GB-Mo  (EBS:VolumeUsage.gp3)
+  ipv4          US$0.005000 per Hrs  (USE1-PublicIPv4:InUseAddress)
+
+Cost per 1,000 task-hours (US$):
+  FARGATE on-demand (x86_64)                                 24.69
+  FARGATE on-demand (ARM64, reference)                       19.75
+  FARGATE_SPOT                                               -
+  EC2 t4g.medium on-demand, 2 tasks/instance (ENI-limited)   18.44
+  EC2 t4g.medium if 3 tasks/instance fitted (no ENI limit)   12.30
+  (FARGATE_SPOT: no Fargate Spot product in the Price List API for this Region - see Cost Explorer tomorrow)
+Public IPv4 on top (US$ per 1,000 task-hours):
+  Fargate (1 address per task)                               5.00
+  EC2 (1 address per instance / 2 tasks)                     2.50
+tasks per t4g.medium: by ENI 2, by CPU 4, by memory ~3 -> 2
+saved /home/michael/ecs-capacity/build/results/prices.json

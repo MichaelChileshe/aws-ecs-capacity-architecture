@@ -1,0 +1,68 @@
+{
+ "rows": [
+  {
+   "lb": "ALB",
+   "dns_answers": [
+    "44.221.149.205",
+    "54.162.15.135"
+   ],
+   "ok": "20/20",
+   "ms_p50": 773.8,
+   "ms_p90": 828.5,
+   "task_saw_peer": [
+    "10.160.0.179",
+    "10.160.1.117"
+   ],
+   "x_forwarded_for": [
+    "<my-public-ip>"
+   ],
+   "x_forwarded_proto": [
+    "http"
+   ],
+   "trace_header": true,
+   "tasks_answering": [
+    "707690ca",
+    "951b469d"
+   ],
+   "admin_status": 403,
+   "admin_body": "blocked at the load balancer",
+   "errors": []
+  },
+  {
+   "lb": "NLB",
+   "dns_answers": [
+    "34.198.191.43",
+    "44.208.116.58"
+   ],
+   "ok": "20/20",
+   "ms_p50": 718.2,
+   "ms_p90": 912.4,
+   "task_saw_peer": [
+    "10.160.0.132",
+    "10.160.1.167"
+   ],
+   "x_forwarded_for": [
+    "None"
+   ],
+   "x_forwarded_proto": [
+    "None"
+   ],
+   "trace_header": false,
+   "tasks_answering": [
+    "707690ca",
+    "951b469d"
+   ],
+   "admin_status": 404,
+   "admin_body": "{'error': 'not found', 'path': '/admin/test', 'ser",
+   "errors": []
+  }
+ ],
+ "target_health": {
+  "alb": {
+   "healthy": 2
+  },
+  "nlb": {
+   "healthy": 2
+  }
+ }
+}

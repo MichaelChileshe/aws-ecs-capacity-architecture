@@ -1,0 +1,48 @@
+routes-api before: {'FARGATE_SPOT': 4}  (routes_mode=spot)
+clock offset to AWS -0.317 s (round trip 605.1 ms)
+loadgen spot-trap: task 046e0a78a7f54cadb358cd07cd15d840 started, profile 20:300 (300 s of load)
+  loadgen task PROVISIONING ...
+  loadgen task PENDING ...
+  loadgen task RUNNING after 26 s
+  traffic flowing; 60 s of steady load before the reclaim
+  loadgen t+  20s   20 rps  sent  20 ok  20 err   0 p50 5.7 ms  routes-api tasks answering: 4  
+  loadgen t+  30s   20 rps  sent  20 ok  20 err   0 p50 5.6 ms  routes-api tasks answering: 4  
+  loadgen t+  40s   20 rps  sent  20 ok  20 err   0 p50 5.3 ms  routes-api tasks answering: 4  
+  loadgen t+  50s   20 rps  sent  20 ok  20 err   0 p50 6.3 ms  routes-api tasks answering: 4  
+  loadgen t+  60s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 4  
+  loadgen t+  70s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 4  
+  loadgen t+  80s   20 rps  sent  20 ok  20 err   0 p50 5.6 ms  routes-api tasks answering: 4  
+  loadgen t+  90s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 4  
+  loadgen t+ 100s   20 rps  sent  20 ok  20 err   0 p50 5.5 ms  routes-api tasks answering: 4  
+  loadgen t+ 110s   20 rps  sent  20 ok  20 err   0 p50 6.1 ms  routes-api tasks answering: 4  
+  loadgen t+ 120s   20 rps  sent  20 ok  20 err   0 p50 5.5 ms  routes-api tasks answering: 4  
+  loadgen t+ 130s   20 rps  sent  20 ok  20 err   0 p50 5.3 ms  routes-api tasks answering: 4  
+  loadgen t+ 140s   20 rps  sent  20 ok  20 err   0 p50 5.6 ms  routes-api tasks answering: 4  
+  loadgen t+ 150s   20 rps  sent  20 ok  20 err   0 p50 5.3 ms  routes-api tasks answering: 4  
+
+RECLAIM at 2026-10-26T10:34:58.538Z: stopped 4 FARGATE_SPOT task(s) at once (0 other task(s) untouched)
+  +   19s  running 0/4  pending 0  targets {'healthy': 4}
+  loadgen t+ 165s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 4  
+  loadgen t+ 180s   20 rps  sent  20 ok  20 err   0 p50 5.8 ms  routes-api tasks answering: 4  
+  loadgen t+ 195s   20 rps  sent  20 ok  20 err   0 p50 5.5 ms  routes-api tasks answering: 4  
+  loadgen t+ 210s   20 rps  sent  20 ok   0 err  20 p50 None ms  routes-api tasks answering: 0  {'503': 20}
+  +   64s  running 0/4  pending 4  targets {'healthy': 1}
+  loadgen t+ 225s   20 rps  sent  20 ok   0 err  20 p50 None ms  routes-api tasks answering: 0  {'503': 20}
+  loadgen t+ 240s   20 rps  sent  20 ok  20 err   0 p50 6.5 ms  routes-api tasks answering: 1  
+  +   95s  running 4/4  pending 0  targets {'healthy': 4}
+  loadgen t+ 255s   20 rps  sent  20 ok  20 err   0 p50 5.8 ms  routes-api tasks answering: 4  
+  loadgen t+ 270s   20 rps  sent  20 ok  20 err   0 p50 5.8 ms  routes-api tasks answering: 4  
+  loadgen t+ 285s   20 rps  sent  20 ok  20 err   0 p50 6.0 ms  routes-api tasks answering: 4  
+RECOVERED: 4/4 running and every target healthy 95.1 s after the reclaim
+  loadgen task STOPPED (exit code 0)
+loadgen spot-trap: 5403/6000 ok (90.05%), errors {'503': 597}, p50 5.7 / p90 7.1 / p99 24.0 ms
+
+== spot drill trap
+  before: {'FARGATE_SPOT': 4}   stopped at once: 4   untouched: 0
+  steady load before the reclaim: 3360/3360 ok (100.0%)
+  reclaim window (97 s, reclaim -> recovered): 1343/1940 ok = 69.23% available, errors {'503': 597}
+  seconds with errors 31, longest run with NO successful request 28 s, first/last error at +32.0 / +62.0 s
+  zero healthy targets: never (s after reclaim)   recovered after: 95.1 s
+  after: {'FARGATE_SPOT': 4}
+  stopped tasks by stop code: {'UserInitiated': 4}   REAL Spot interruptions: 0 
+saved /home/michael/ecs-capacity/build/results/spot-trap.json

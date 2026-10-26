@@ -1,0 +1,23 @@
+{
+ "label": "scale",
+ "url": "http://mvelaphanda-routes-alb-338735080.us-east-1.elb.amazonaws.com/route?from=JNB&to=DBN",
+ "profile": "5:120,50:420",
+ "start": 1793018354.0,
+ "end": 1793018893.9926624,
+ "seconds": 540,
+ "sent": 21600,
+ "ok": 21600,
+ "err": 0,
+ "errors": {},
+ "availability_pct": 100.0,
+ "p50": 6.2,
+ "p90": 51.2,
+ "p99": 93.3,
+ "max": 3011.5,
+ "first_err_t": null,
+ "last_err_t": null,
+ "task_id": "4dbdc7fd72944278ac25db3808d2a37c",
+ "seconds_logged": 540,
+ "exit_code": 0,
+ "complete": true
+}

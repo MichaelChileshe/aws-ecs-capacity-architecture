@@ -1,0 +1,23 @@
+i-0bab7671e385cd2c6: 2 task(s), 3 network interface(s)
+    device 0  interface  10.160.1.13     
+    device 1  interface  10.160.1.130    arn:aws:ecs:us-east-1:<account-id>:attac
+    device 2  interface  10.160.1.52     arn:aws:ecs:us-east-1:<account-id>:attac
+i-053047b7ed6926254: 2 task(s), 3 network interface(s)
+    device 0  interface  10.160.1.193    
+    device 1  interface  10.160.1.134    arn:aws:ecs:us-east-1:<account-id>:attac
+    device 2  interface  10.160.1.43     arn:aws:ecs:us-east-1:<account-id>:attac
+i-0304bbf46938177e9: 1 task(s), 2 network interface(s)
+    device 0  interface  10.160.1.18     
+    device 1  interface  10.160.1.163    arn:aws:ecs:us-east-1:<account-id>:attac
+i-0ecca60ee2abcd350: 1 task(s), 2 network interface(s)
+    device 0  interface  10.160.1.101    
+    device 1  interface  10.160.1.253    arn:aws:ecs:us-east-1:<account-id>:attac
+[us-east-1 i-0bab7671e385cd2c6] Success in 4 s
+ens5             UP             12:ff:db:93:af:6d <BROADCAST,MULTICAST,UP,LOWER_UP> 
+docker0          DOWN           02:42:c9:d0:6c:d2 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+ecs-bridge       UP             92:97:36:dd:ec:62 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth4936881a@if3 UP             76:a3:7c:0f:2e:45 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+vethe355a3f5@if3 UP             46:b0:40:1a:6d:26 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+{"Cluster":"mvelaphanda-routes","ContainerInstanceArn":"arn:aws:ecs:us-east-1:<account-id>:container-instance/mvelaphanda-routes/4ebd5d4218954f70afc489d3dce02d0b","Version":"Amazon ECS Agent - v1.108.0 (*fef29b5c)"}
+saved /home/michael/ecs-capacity/build/results/ec2-enis.json

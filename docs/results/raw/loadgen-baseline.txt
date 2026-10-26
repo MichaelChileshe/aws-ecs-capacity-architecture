@@ -1,0 +1,18 @@
+loadgen baseline: task cfcb3815a8794eb6a603e64f1315cdc0 started, profile 20:120 (120 s of load)
+  loadgen task PROVISIONING ...
+  loadgen task RUNNING after 17 s
+  loadgen t+   0s   20 rps  sent  20 ok  20 err   0 p50 5.9 ms  routes-api tasks answering: 2  
+  loadgen t+  10s   20 rps  sent  20 ok  20 err   0 p50 5.7 ms  routes-api tasks answering: 2  
+  loadgen t+  20s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 2  
+  loadgen t+  30s   20 rps  sent  20 ok  20 err   0 p50 5.5 ms  routes-api tasks answering: 2  
+  loadgen t+  40s   20 rps  sent  20 ok  20 err   0 p50 5.3 ms  routes-api tasks answering: 2  
+  loadgen t+  50s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 2  
+  loadgen t+  60s   20 rps  sent  20 ok  20 err   0 p50 6.2 ms  routes-api tasks answering: 2  
+  loadgen t+  70s   20 rps  sent  20 ok  20 err   0 p50 5.5 ms  routes-api tasks answering: 2  
+  loadgen t+  80s   20 rps  sent  20 ok  20 err   0 p50 5.5 ms  routes-api tasks answering: 2  
+  loadgen t+  90s   20 rps  sent  20 ok  20 err   0 p50 5.7 ms  routes-api tasks answering: 2  
+  loadgen t+ 100s   20 rps  sent  20 ok  20 err   0 p50 5.6 ms  routes-api tasks answering: 2  
+  loadgen t+ 110s   20 rps  sent  20 ok  20 err   0 p50 5.4 ms  routes-api tasks answering: 2  
+  loadgen task STOPPED (exit code 0)
+loadgen baseline: 2400/2400 ok (100.0%), errors none, p50 5.6 / p90 7.2 / p99 29.1 ms
+saved build/results/loadgen-baseline.json and .jsonl

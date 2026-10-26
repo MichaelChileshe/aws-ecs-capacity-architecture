@@ -1,0 +1,9 @@
+routes-api /whoami: 20/20 answers from tasks ['59188875a8c3', 'a70020218c49'] (FARGATE, us-east-1a, us-east-1b)
+  code runs as: arn:aws:iam::<account-id>:role/mvelaphanda-routes-routes-api-task
+  = routes-api TASK role: YES    = execution role: NO (correct)    keys in response: False
+Service Connect /route: 20/20 ok, eta-engine tasks seen: ['c4e1381ef1e0', 'c83859c53eca'], eta call p50 3.4 ms, errors: none
+  routes->eta pairs: 59188875->c4e1381e 59188875->c83859c5 a7002021->c4e1381e a7002021->c83859c5
+  eta-engine code runs as: arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task = its TASK role: YES
+ALB /admin/test: 403 "blocked at the load balancer"
+clock: this machine is -0.232 s off AWS time (round trip 813.9 ms)
+saved /home/michael/ecs-capacity/build/results/whoami.json

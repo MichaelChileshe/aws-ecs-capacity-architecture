@@ -1,0 +1,76 @@
+{
+ "alb": "mvelaphanda-routes-alb-338735080.us-east-1.elb.amazonaws.com",
+ "expected": {
+  "eta_engine": "arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task",
+  "execution": "arn:aws:iam::<account-id>:role/mvelaphanda-routes-execution",
+  "routes_api": "arn:aws:iam::<account-id>:role/mvelaphanda-routes-routes-api-task"
+ },
+ "routes_api": {
+  "answers": "20/20",
+  "role_arns_seen": [
+   "arn:aws:iam::<account-id>:role/mvelaphanda-routes-routes-api-task"
+  ],
+  "tasks_seen": [
+   "59188875a8c3",
+   "a70020218c49"
+  ],
+  "launch_types": [
+   "FARGATE"
+  ],
+  "azs": [
+   "us-east-1a",
+   "us-east-1b"
+  ],
+  "is_task_role": true,
+  "is_execution_role": false,
+  "keys_in_response": false
+ },
+ "service_connect": {
+  "answers": "20/20",
+  "errors": [],
+  "eta_tasks_seen": [
+   "c4e1381ef1e0",
+   "c83859c53eca"
+  ],
+  "pairs": [
+   "59188875->c4e1381e",
+   "59188875->c83859c5",
+   "a7002021->c4e1381e",
+   "a7002021->c83859c5"
+  ],
+  "eta_call_ms_p50": 3.4,
+  "eta_role_arns_seen": [
+   "arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task"
+  ],
+  "eta_is_its_task_role": true,
+  "sample": {
+   "from": "JNB",
+   "to": "DBN",
+   "eta_minutes": 501.0,
+   "km": 625.4,
+   "eta_call_ms": 50.7,
+   "routes_api": {
+    "service": "routes-api",
+    "task_id": "59188875a8c343c98b2cf999befaddcc",
+    "az": "us-east-1b",
+    "launch_type": "FARGATE",
+    "cluster": "mvelaphanda-routes",
+    "draining": false
+   },
+   "eta_engine": {
+    "service": "eta-engine",
+    "task_id": "c83859c53eca46db97697d9821ecf152",
+    "az": "us-east-1b",
+    "launch_type": "FARGATE",
+    "draining": false,
+    "role_arn": "arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task"
+   }
+  }
+ },
+ "admin_path": {
+  "status": 403,
+  "body": "blocked at the load balancer"
+ },
+ "clock_offset_s": -0.232,
+ "clock_rtt_ms": 813.9
+}

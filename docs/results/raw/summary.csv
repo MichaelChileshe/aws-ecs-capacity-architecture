@@ -1,0 +1,75 @@
+section,item,value
+ECS status,autoscaling: eta-engine desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,autoscaling: routes-api desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,autoscaling: target health,{'alb': {'healthy': 2}}
+ECS status,base: eta-engine desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,base: routes-api desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,base: target health,{'alb': {'healthy': 2}}
+ECS status,mixed: eta-engine desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,mixed: routes-api desired / running / split,"6 / 6 / {'FARGATE': 3, 'FARGATE_SPOT': 3}"
+ECS status,mixed: target health,{'alb': {'healthy': 6}}
+ECS status,nlb: eta-engine desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,nlb: routes-api desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,nlb: target health,"{'alb': {'healthy': 2}, 'nlb': {'healthy': 2}}"
+ECS status,spot: eta-engine desired / running / split,2 / 2 / {'FARGATE': 2}
+ECS status,spot: routes-api desired / running / split,4 / 4 / {'FARGATE_SPOT': 4}
+ECS status,spot: target health,{'alb': {'healthy': 4}}
+Identity,routes-api code runs as its TASK role / as the execution role / keys returned,True / False / False
+Identity,eta-engine code runs as its TASK role,True
+Service Connect,/route answers / eta tasks seen / eta call p50 ms,20/20 / 2 / 3.4
+ALB,/admin/test answered by the ALB,403 blocked at the load balancer
+Clock,WSL clock offset to AWS (s),-0.232
+Load generator,baseline: ok / sent (availability %) / errors,2400 / 2400 (100.0%) / none
+Load generator,baseline: latency p50 / p90 / p99 ms,5.6 / 7.2 / 29.1
+Load generator,scale: ok / sent (availability %) / errors,21600 / 21600 (100.0%) / none
+Load generator,scale: latency p50 / p90 / p99 ms,6.2 / 51.2 / 93.3
+Load generator,spot-trap: ok / sent (availability %) / errors,5403 / 6000 (90.05%) / {'503': 597}
+Load generator,spot-trap: latency p50 / p90 / p99 ms,5.7 / 7.1 / 24.0
+Spot reclaim,trap: split before / Spot tasks stopped at once / untouched,{'FARGATE_SPOT': 4} / 4 / 0
+Spot reclaim,trap: availability in the reclaim window (ok/sent),69.23% (1343/1940 over 97 s)
+Spot reclaim,trap: errors / seconds with errors / longest run with 0 ok (s),{'503': 597} / 31 / 28
+Spot reclaim,trap: seconds to recovered (all running + healthy),95.1
+Spot reclaim,"trap: zero healthy targets (s after reclaim, from-to)",never
+Spot reclaim,trap: split after,{'FARGATE_SPOT': 4}
+Spot reclaim,trap: stopped tasks by stop code / REAL Spot interruptions,{'UserInitiated': 4} / 0
+Spot reclaim,fix: -,-
+EC2 capacity,t4g.medium: max ENIs / awsvpcTrunking,3 / disabled
+EC2 capacity,eta-batch tasks per instance: by ENI / CPU / memory -> used,2 / 8 / 7 -> 2 (ENI)
+EC2 capacity,instances for 6 tasks: with / without the ENI limit,3 / 1
+EC2 capacity,ASG desired steps,2 -> 3
+EC2 capacity,s after service update: first launch / first registered / all registered,-55.6 / -35.4 / 71.7
+EC2 capacity,s after service update: first task RUNNING / all RUNNING,-8.9 / 108.2
+EC2 capacity,tasks per instance (placement),"5cd2c6 us-east-1b 2, 926254 us-east-1b 2, 8177e9 us-east-1b 2"
+EC2 capacity,tasks per AZ,{'us-east-1b': 6}
+EC2 capacity,network interfaces per instance (tasks),"5cd2c6 3 (2), 926254 3 (2), 8177e9 2 (1), bcd350 2 (1)"
+Auto scaling,min / max / peak desired,2 / 6 / 6
+Auto scaling,s after the load step: first scale-out / peak running,292.0 / 365.0
+Auto scaling,s after the load ended: first scale-in / back to min,1015.0 / 1409.0
+Auto scaling,alarm GreaterThanThreshold 300.0,None of 3 x 60 s
+Auto scaling,alarm LessThanThreshold 270.0,None of 15 x 60 s
+Auto scaling,load generator availability %,100.0
+ALB vs NLB,ALB: DNS addresses / ok / p50 ms,2 / 20/20 / 773.8
+ALB vs NLB,ALB: task saw peer / X-Forwarded-For,"['10.160.0.179', '10.160.1.117'] / ['<my-public-ip>']"
+ALB vs NLB,ALB: /admin/test,403 blocked at the load balancer
+ALB vs NLB,NLB: DNS addresses / ok / p50 ms,2 / 20/20 / 718.2
+ALB vs NLB,NLB: task saw peer / X-Forwarded-For,"['10.160.0.132', '10.160.1.167'] / ['None']"
+ALB vs NLB,NLB: /admin/test,"404 {'error': 'not found', 'path': '/admin/test', 'ser"
+"Cost per 1,000 task-hours (US$)",FARGATE on-demand (x86_64),24.69
+"Cost per 1,000 task-hours (US$)","FARGATE on-demand (ARM64, reference)",19.75
+"Cost per 1,000 task-hours (US$)",FARGATE_SPOT,-
+"Cost per 1,000 task-hours (US$)","EC2 t4g.medium on-demand, 2 tasks/instance (ENI-limited)",18.44
+"Cost per 1,000 task-hours (US$)",EC2 t4g.medium if 3 tasks/instance fitted (no ENI limit),12.3
+"Cost per 1,000 task-hours (US$)",public IPv4: Fargate (1 address per task),5.0
+"Cost per 1,000 task-hours (US$)",public IPv4: EC2 (1 address per instance / 2 tasks),2.5
+"Cost per 1,000 task-hours (US$)",Fargate Spot in the Price List API,False
+Terraform,tf-apply-autoscaling.txt,"Apply complete! Resources: 2 added, 1 changed, 0 destroyed."
+Terraform,tf-apply-base.txt,"Apply complete! Resources: 34 added, 0 changed, 0 destroyed."
+Terraform,tf-apply-ec2-off-2.txt,"Apply complete! Resources: 0 added, 1 changed, 6 destroyed."
+Terraform,tf-apply-ec2-off.txt,"Plan: 0 to add, 1 to change, 11 to destroy."
+Terraform,tf-apply-ec2-tasks.txt,"Apply complete! Resources: 0 added, 1 changed, 0 destroyed."
+Terraform,tf-apply-ec2.txt,"Apply complete! Resources: 11 added, 1 changed, 0 destroyed."
+Terraform,tf-apply-fix.txt,"Apply complete! Resources: 0 added, 1 changed, 0 destroyed."
+Terraform,tf-apply-nlb.txt,"Apply complete! Resources: 7 added, 1 changed, 0 destroyed."
+Terraform,tf-apply-trap.txt,"Apply complete! Resources: 0 added, 1 changed, 0 destroyed."
+Terraform,tf-destroy.txt,Destroy complete! Resources: 43 destroyed.
+Terraform,tf-plan-base.txt,"Plan: 34 to add, 0 to change, 0 to destroy."

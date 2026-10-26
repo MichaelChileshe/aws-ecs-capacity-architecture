@@ -1,0 +1,13 @@
+#!/bin/bash
+# Boot script for an ECS container instance (ECS-optimized Amazon Linux 2023, arm64), rendered by
+# Terraform. It tells the ECS agent which cluster to join; the agent does the rest.
+#   ECS_AWSVPC_BLOCK_IMDS: tasks (awsvpc mode) can't reach the instance metadata service, so a
+#   task can never borrow the INSTANCE role; it only ever gets its own task role.
+cat >> /etc/ecs/ecs.config <<'CONF'
+ECS_CLUSTER=${cluster}
+ECS_AWSVPC_BLOCK_IMDS=true
+ECS_ENABLE_CONTAINER_METADATA=true
+CONF
+# SSM Agent for commands without SSH: installed only if this AMI doesn't already have it.
+# Never allowed to fail the boot (the ECS part above is what matters).
+(rpm -q amazon-ssm-agent >/dev/null 2>&1 || dnf install -y amazon-ssm-agent) && systemctl enable --now amazon-ssm-agent || true

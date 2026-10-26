@@ -1,0 +1,164 @@
+{
+ "label": "trap",
+ "routes_mode": {
+  "desired": 4,
+  "mode": "spot",
+  "strategy": [
+   {
+    "base": 0,
+    "cp": "FARGATE_SPOT",
+    "weight": 1
+   }
+  ]
+ },
+ "clock_offset_s": -0.317,
+ "split_before": {
+  "FARGATE_SPOT": 4
+ },
+ "stopped": [
+  {
+   "task": "01005edd44864d70b130e274adbaf60d",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1b",
+   "last_status": "DEACTIVATING",
+   "desired_status": "STOPPED",
+   "health": "-",
+   "started": "2026-10-26T12:26:57.858000+02:00",
+   "container_instance": null
+  },
+  {
+   "task": "1a92fb42cb5049f1abdaa51bd6828920",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1a",
+   "last_status": "DEACTIVATING",
+   "desired_status": "STOPPED",
+   "health": "-",
+   "started": "2026-10-26T12:26:27.291000+02:00",
+   "container_instance": null
+  },
+  {
+   "task": "74a0c4921f3242b192b5b21a2f24e58a",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1b",
+   "last_status": "DEACTIVATING",
+   "desired_status": "STOPPED",
+   "health": "-",
+   "started": "2026-10-26T12:27:00.167000+02:00",
+   "container_instance": null
+  },
+  {
+   "task": "e508d133976c4e2ea5806c12be8b5167",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1a",
+   "last_status": "DEACTIVATING",
+   "desired_status": "STOPPED",
+   "health": "-",
+   "started": "2026-10-26T12:27:00.363000+02:00",
+   "container_instance": null
+  }
+ ],
+ "stopped_count": 4,
+ "untouched": 0,
+ "reclaim_utc": "2026-10-26T10:34:58.538Z",
+ "recovered_after_s": 95.1,
+ "zero_healthy_targets_s": null,
+ "window": {
+  "seconds": 97,
+  "sent": 1940,
+  "ok": 1343,
+  "err": 597,
+  "errors": {
+   "503": 597
+  },
+  "availability_pct": 69.23,
+  "seconds_with_errors": 31,
+  "longest_zero_ok_run_s": 28,
+  "first_error_s": 32.0,
+  "last_error_s": 62.0
+ },
+ "before_reclaim": {
+  "seconds": 168,
+  "sent": 3360,
+  "ok": 3360,
+  "err": 0,
+  "errors": {},
+  "availability_pct": 100.0,
+  "seconds_with_errors": 0,
+  "longest_zero_ok_run_s": 0,
+  "first_error_s": null,
+  "last_error_s": null
+ },
+ "whole_run": {
+  "sent": 6000,
+  "ok": 5403,
+  "err": 597,
+  "errors": {
+   "503": 597
+  },
+  "availability_pct": 90.05,
+  "p50": 5.7,
+  "p90": 7.1,
+  "p99": 24.0
+ },
+ "split_after": {
+  "FARGATE_SPOT": 4
+ },
+ "tasks_after": [
+  {
+   "task": "41dff12a136148ed9d1ed158b2867dd5",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1b",
+   "last_status": "RUNNING",
+   "desired_status": "RUNNING",
+   "health": "HEALTHY",
+   "started": "2026-10-26T12:36:17.007000+02:00",
+   "container_instance": null
+  },
+  {
+   "task": "51002ce3c27e44a1b5574af05d5f9275",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1b",
+   "last_status": "RUNNING",
+   "desired_status": "RUNNING",
+   "health": "HEALTHY",
+   "started": "2026-10-26T12:36:04.612000+02:00",
+   "container_instance": null
+  },
+  {
+   "task": "a2071329561b4f8db26132648a318bf2",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1a",
+   "last_status": "RUNNING",
+   "desired_status": "RUNNING",
+   "health": "HEALTHY",
+   "started": "2026-10-26T12:36:10.538000+02:00",
+   "container_instance": null
+  },
+  {
+   "task": "ef4b1e47a4c040639fcbb1599a57ad77",
+   "provider": "FARGATE_SPOT",
+   "launch_type": "FARGATE",
+   "az": "us-east-1a",
+   "last_status": "RUNNING",
+   "desired_status": "RUNNING",
+   "health": "HEALTHY",
+   "started": "2026-10-26T12:36:17.547000+02:00",
+   "container_instance": null
+  }
+ ],
+ "interruption_scan": {
+  "stopped_tasks_seen": 4,
+  "by_stop_code": {
+   "UserInitiated": 4
+  },
+  "real_spot_interruptions": [],
+  "service_events_mentioning_interruption": []
+ }
+}

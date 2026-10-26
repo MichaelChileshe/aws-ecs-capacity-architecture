@@ -1,0 +1,69 @@
+{"t": 1793018374.5, "utc": "2026-10-26T12:39:34.494Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 5, "load_s": 20.0}
+{"t": 1793018425.4, "utc": "2026-10-26T12:40:25.444Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 5, "load_s": 71.0}
+{"t": 1793018455.6, "utc": "2026-10-26T12:40:55.586Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 5, "load_s": 102.0}
+{"t": 1793018504.4, "utc": "2026-10-26T12:41:44.350Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 150.0}
+{"t": 1793018555.8, "utc": "2026-10-26T12:42:35.789Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 202.0}
+{"t": 1793018585.2, "utc": "2026-10-26T12:43:05.244Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 231.0}
+{"t": 1793018619.1, "utc": "2026-10-26T12:43:39.074Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 265.0}
+{"t": 1793018660.6, "utc": "2026-10-26T12:44:20.622Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 307.0}
+{"t": 1793018715.1, "utc": "2026-10-26T12:45:15.060Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 361.0}
+{"t": 1793018744.0, "utc": "2026-10-26T12:45:43.992Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 390.0}
+{"t": 1793018774.8, "utc": "2026-10-26T12:46:14.801Z", "desired": 6, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 421.0}
+{"t": 1793018804.6, "utc": "2026-10-26T12:46:44.588Z", "desired": 6, "running": 2, "pending": 4, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 50, "load_s": 451.0}
+{"t": 1793018839.4, "utc": "2026-10-26T12:47:19.417Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 50, "load_s": 485.0}
+{"t": 1793018874.3, "utc": "2026-10-26T12:47:54.290Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 50, "load_s": 520.0}
+{"t": 1793018911.0, "utc": "2026-10-26T12:48:30.959Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 50, "load_s": 557.0}
+{"t": 1793018937.1, "utc": "2026-10-26T12:48:57.136Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 583.0}
+{"t": 1793018962.7, "utc": "2026-10-26T12:49:22.668Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 609.0}
+{"t": 1793018988.2, "utc": "2026-10-26T12:49:48.215Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 634.0}
+{"t": 1793019014.3, "utc": "2026-10-26T12:50:14.269Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 660.0}
+{"t": 1793019039.2, "utc": "2026-10-26T12:50:39.161Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 685.0}
+{"t": 1793019064.4, "utc": "2026-10-26T12:51:04.385Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 710.0}
+{"t": 1793019089.4, "utc": "2026-10-26T12:51:29.411Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 735.0}
+{"t": 1793019115.5, "utc": "2026-10-26T12:51:55.451Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 761.0}
+{"t": 1793019140.4, "utc": "2026-10-26T12:52:20.417Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 786.0}
+{"t": 1793019165.8, "utc": "2026-10-26T12:52:45.777Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 812.0}
+{"t": 1793019193.6, "utc": "2026-10-26T12:53:13.566Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 840.0}
+{"t": 1793019218.5, "utc": "2026-10-26T12:53:38.467Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 864.0}
+{"t": 1793019243.6, "utc": "2026-10-26T12:54:03.616Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 890.0}
+{"t": 1793019269.4, "utc": "2026-10-26T12:54:29.435Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 915.0}
+{"t": 1793019296.5, "utc": "2026-10-26T12:54:56.484Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 942.0}
+{"t": 1793019321.4, "utc": "2026-10-26T12:55:21.374Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 967.0}
+{"t": 1793019346.8, "utc": "2026-10-26T12:55:46.838Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 993.0}
+{"t": 1793019373.0, "utc": "2026-10-26T12:56:12.983Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1019.0}
+{"t": 1793019401.6, "utc": "2026-10-26T12:56:41.566Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1048.0}
+{"t": 1793019432.0, "utc": "2026-10-26T12:57:11.951Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1078.0}
+{"t": 1793019457.2, "utc": "2026-10-26T12:57:37.182Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1103.0}
+{"t": 1793019482.1, "utc": "2026-10-26T12:58:02.110Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1128.0}
+{"t": 1793019507.1, "utc": "2026-10-26T12:58:27.065Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1153.0}
+{"t": 1793019532.0, "utc": "2026-10-26T12:58:51.966Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1178.0}
+{"t": 1793019557.2, "utc": "2026-10-26T12:59:17.189Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1203.0}
+{"t": 1793019584.9, "utc": "2026-10-26T12:59:44.916Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1231.0}
+{"t": 1793019610.4, "utc": "2026-10-26T13:00:10.382Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1256.0}
+{"t": 1793019635.1, "utc": "2026-10-26T13:00:35.099Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1281.0}
+{"t": 1793019661.0, "utc": "2026-10-26T13:01:01.039Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1307.0}
+{"t": 1793019687.4, "utc": "2026-10-26T13:01:27.425Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1333.0}
+{"t": 1793019712.1, "utc": "2026-10-26T13:01:52.119Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1358.0}
+{"t": 1793019737.7, "utc": "2026-10-26T13:02:17.700Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1384.0}
+{"t": 1793019762.7, "utc": "2026-10-26T13:02:42.717Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1409.0}
+{"t": 1793019787.6, "utc": "2026-10-26T13:03:07.589Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1434.0}
+{"t": 1793019812.6, "utc": "2026-10-26T13:03:32.588Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1459.0}
+{"t": 1793019838.5, "utc": "2026-10-26T13:03:58.501Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1485.0}
+{"t": 1793019864.2, "utc": "2026-10-26T13:04:24.201Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1510.0}
+{"t": 1793019890.9, "utc": "2026-10-26T13:04:50.854Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 3}, "load_rps": 0, "load_s": 1537.0}
+{"t": 1793019916.5, "utc": "2026-10-26T13:05:16.483Z", "desired": 6, "running": 6, "pending": 0, "healthy_targets": 6, "split": {"FARGATE": 3, "FARGATE_SPOT": 2}, "load_rps": 0, "load_s": 1562.0}
+{"t": 1793019942.4, "utc": "2026-10-26T13:05:42.416Z", "desired": 5, "running": 5, "pending": 0, "healthy_targets": 5, "split": {"FARGATE": 3, "FARGATE_SPOT": 2}, "load_rps": 0, "load_s": 1588.0}
+{"t": 1793019967.7, "utc": "2026-10-26T13:06:07.695Z", "desired": 5, "running": 5, "pending": 0, "healthy_targets": 5, "split": {"FARGATE": 3, "FARGATE_SPOT": 2}, "load_rps": 0, "load_s": 1614.0}
+{"t": 1793019993.1, "utc": "2026-10-26T13:06:33.085Z", "desired": 5, "running": 5, "pending": 0, "healthy_targets": 5, "split": {"FARGATE": 3, "FARGATE_SPOT": 2}, "load_rps": 0, "load_s": 1639.0}
+{"t": 1793020018.7, "utc": "2026-10-26T13:06:58.738Z", "desired": 5, "running": 5, "pending": 0, "healthy_targets": 5, "split": {"FARGATE": 3, "FARGATE_SPOT": 2}, "load_rps": 0, "load_s": 1665.0}
+{"t": 1793020043.4, "utc": "2026-10-26T13:07:23.384Z", "desired": 4, "running": 4, "pending": 0, "healthy_targets": 4, "split": {"FARGATE": 3, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1689.0}
+{"t": 1793020068.3, "utc": "2026-10-26T13:07:48.310Z", "desired": 4, "running": 4, "pending": 0, "healthy_targets": 4, "split": {"FARGATE": 3, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1714.0}
+{"t": 1793020093.1, "utc": "2026-10-26T13:08:13.059Z", "desired": 4, "running": 4, "pending": 0, "healthy_targets": 4, "split": {"FARGATE": 3, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1739.0}
+{"t": 1793020118.0, "utc": "2026-10-26T13:08:37.977Z", "desired": 4, "running": 4, "pending": 0, "healthy_targets": 4, "split": {"FARGATE": 3, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1764.0}
+{"t": 1793020142.6, "utc": "2026-10-26T13:09:02.570Z", "desired": 4, "running": 4, "pending": 0, "healthy_targets": 4, "split": {"FARGATE": 3, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1789.0}
+{"t": 1793020168.1, "utc": "2026-10-26T13:09:28.118Z", "desired": 3, "running": 3, "pending": 0, "healthy_targets": 3, "split": {"FARGATE": 2, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1814.0}
+{"t": 1793020195.8, "utc": "2026-10-26T13:09:55.812Z", "desired": 3, "running": 3, "pending": 0, "healthy_targets": 3, "split": {"FARGATE": 2, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1842.0}
+{"t": 1793020225.2, "utc": "2026-10-26T13:10:25.228Z", "desired": 3, "running": 3, "pending": 0, "healthy_targets": 3, "split": {"FARGATE": 2, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1871.0}
+{"t": 1793020250.8, "utc": "2026-10-26T13:10:50.792Z", "desired": 3, "running": 3, "pending": 0, "healthy_targets": 3, "split": {"FARGATE": 2, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1897.0}
+{"t": 1793020276.2, "utc": "2026-10-26T13:11:16.219Z", "desired": 3, "running": 3, "pending": 0, "healthy_targets": 3, "split": {"FARGATE": 2, "FARGATE_SPOT": 1}, "load_rps": 0, "load_s": 1922.0}
+{"t": 1793020302.6, "utc": "2026-10-26T13:11:42.565Z", "desired": 2, "running": 2, "pending": 0, "healthy_targets": 2, "split": {"FARGATE": 2}, "load_rps": 0, "load_s": 1949.0}

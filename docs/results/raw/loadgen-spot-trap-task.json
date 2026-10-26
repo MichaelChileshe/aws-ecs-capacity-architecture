@@ -1,0 +1,8 @@
+{
+ "label": "spot-trap",
+ "profile": "20:300",
+ "task_arn": "arn:aws:ecs:us-east-1:<account-id>:task/mvelaphanda-routes/046e0a78a7f54cadb358cd07cd15d840",
+ "task_id": "046e0a78a7f54cadb358cd07cd15d840",
+ "started_local_utc": "2026-10-26T10:31:53.646Z",
+ "seconds": 300
+}

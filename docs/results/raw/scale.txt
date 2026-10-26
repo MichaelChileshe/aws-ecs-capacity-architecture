@@ -1,0 +1,90 @@
+scalable target service/mvelaphanda-routes/routes-api: min 2 max 6; load profile 5:120,50:420; clock offset -0.326 s
+loadgen scale: task 4dbdc7fd72944278ac25db3808d2a37c started, profile 5:120,50:420 (540 s of load)
+  loadgen task PROVISIONING ...
+  loadgen task PENDING ...
+  loadgen task RUNNING after 28 s
+  12:39:34  load   5 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:40:25  load   5 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:40:55  load   5 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:41:44  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:42:35  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:43:05  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:43:39  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:44:20  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:45:15  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:45:43  load  50 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:46:14  load  50 rps  desired 6  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  12:46:44  load  50 rps  desired 6  running 2  pending 4  healthy targets 2  {'FARGATE': 2}
+  12:47:19  load  50 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:47:54  load  50 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:48:30  load  50 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:48:57  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:49:22  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:49:48  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:50:14  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:50:39  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:51:04  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:51:29  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:51:55  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:52:20  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:52:45  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:53:13  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:53:38  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:54:03  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:54:29  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:54:56  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:55:21  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:55:46  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:56:12  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:56:41  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:57:11  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:57:37  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:58:02  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:58:27  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:58:51  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:59:17  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  12:59:44  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:00:10  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:00:35  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:01:01  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:01:27  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:01:52  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:02:17  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:02:42  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:03:07  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:03:32  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:03:58  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:04:24  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:04:50  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 3}
+  13:05:16  load   0 rps  desired 6  running 6  pending 0  healthy targets 6  {'FARGATE': 3, 'FARGATE_SPOT': 2}
+  13:05:42  load   0 rps  desired 5  running 5  pending 0  healthy targets 5  {'FARGATE': 3, 'FARGATE_SPOT': 2}
+  13:06:07  load   0 rps  desired 5  running 5  pending 0  healthy targets 5  {'FARGATE': 3, 'FARGATE_SPOT': 2}
+  13:06:33  load   0 rps  desired 5  running 5  pending 0  healthy targets 5  {'FARGATE': 3, 'FARGATE_SPOT': 2}
+  13:06:58  load   0 rps  desired 5  running 5  pending 0  healthy targets 5  {'FARGATE': 3, 'FARGATE_SPOT': 2}
+  13:07:23  load   0 rps  desired 4  running 4  pending 0  healthy targets 4  {'FARGATE': 3, 'FARGATE_SPOT': 1}
+  13:07:48  load   0 rps  desired 4  running 4  pending 0  healthy targets 4  {'FARGATE': 3, 'FARGATE_SPOT': 1}
+  13:08:13  load   0 rps  desired 4  running 4  pending 0  healthy targets 4  {'FARGATE': 3, 'FARGATE_SPOT': 1}
+  13:08:37  load   0 rps  desired 4  running 4  pending 0  healthy targets 4  {'FARGATE': 3, 'FARGATE_SPOT': 1}
+  13:09:02  load   0 rps  desired 4  running 4  pending 0  healthy targets 4  {'FARGATE': 3, 'FARGATE_SPOT': 1}
+  13:09:28  load   0 rps  desired 3  running 3  pending 0  healthy targets 3  {'FARGATE': 2, 'FARGATE_SPOT': 1}
+  13:09:55  load   0 rps  desired 3  running 3  pending 0  healthy targets 3  {'FARGATE': 2, 'FARGATE_SPOT': 1}
+  13:10:25  load   0 rps  desired 3  running 3  pending 0  healthy targets 3  {'FARGATE': 2, 'FARGATE_SPOT': 1}
+  13:10:50  load   0 rps  desired 3  running 3  pending 0  healthy targets 3  {'FARGATE': 2, 'FARGATE_SPOT': 1}
+  13:11:16  load   0 rps  desired 3  running 3  pending 0  healthy targets 3  {'FARGATE': 2, 'FARGATE_SPOT': 1}
+  13:11:42  load   0 rps  desired 2  running 2  pending 0  healthy targets 2  {'FARGATE': 2}
+  back at the minimum after the load: done
+  loadgen task STOPPED (exit code 0)
+loadgen scale: 21600/21600 ok (100.0%), errors none, p50 6.2 / p90 51.2 / p99 93.3 ms
+
+== auto scaling (min 2, max 6, peak desired 6)
+  load step to 50 rps at 12:41:14: first scale-out +292.0 s, peak running +365.0 s
+  load ended 12:48:14: first scale-in +1015.0 s, back to 2 +1409.0 s
+  activity 12:46:06 scale-out Successful Setting desired count to 6.
+  activity 13:05:09 scale-in  Successful Setting desired count to 5.
+  activity 13:07:09 scale-in  Successful Setting desired count to 4.
+  activity 13:09:09 scale-in  Successful Setting desired count to 3.
+  activity 13:11:09 scale-in  Successful Setting desired count to 2.
+  alarm ...igh-8b482b9c-d0a1-4c8c-b4d4-d219ddae2481: RequestCountPerTarget GreaterThanThreshold 300.0, None of 3 x 60 s  [OK]
+  alarm ...Low-0fe773ec-c7ee-435b-a3af-7687e351328c: RequestCountPerTarget LessThanThreshold 270.0, None of 15 x 60 s  [ALARM]
+  load generator: 21600/21600 ok (100.0%), p50 6.2 / p99 93.3 ms
+saved /home/michael/ecs-capacity/build/results/scale.json

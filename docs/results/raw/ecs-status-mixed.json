@@ -1,0 +1,175 @@
+{
+ "taken_utc": "2026-10-26T10:46:18.183Z",
+ "cluster": "mvelaphanda-routes",
+ "routes_mode": {
+  "desired": 6,
+  "mode": "mixed",
+  "strategy": [
+   {
+    "base": 2,
+    "cp": "FARGATE",
+    "weight": 1
+   },
+   {
+    "base": 0,
+    "cp": "FARGATE_SPOT",
+    "weight": 3
+   }
+  ]
+ },
+ "services": {
+  "eta-engine": {
+   "desired": 2,
+   "running": 2,
+   "pending": 0,
+   "strategy": [
+    {
+     "cp": "FARGATE",
+     "base": 0,
+     "weight": 1
+    }
+   ],
+   "deployments": [
+    {
+     "status": "PRIMARY",
+     "rollout": "COMPLETED",
+     "desired": 2,
+     "running": 2,
+     "pending": 0
+    }
+   ],
+   "split": {
+    "FARGATE": 2
+   },
+   "tasks": [
+    {
+     "task": "c4e1381ef1e0478c80dde4afe16b9308",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:07:31.480000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "c83859c53eca46db97697d9821ecf152",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:07:02.280000+02:00",
+     "container_instance": null
+    }
+   ],
+   "last_event": "(service eta-engine) has reached a steady state."
+  },
+  "routes-api": {
+   "desired": 6,
+   "running": 6,
+   "pending": 0,
+   "strategy": [
+    {
+     "cp": "FARGATE",
+     "base": 2,
+     "weight": 1
+    },
+    {
+     "cp": "FARGATE_SPOT",
+     "base": 0,
+     "weight": 3
+    }
+   ],
+   "deployments": [
+    {
+     "status": "PRIMARY",
+     "rollout": "COMPLETED",
+     "desired": 6,
+     "running": 6,
+     "pending": 0
+    }
+   ],
+   "split": {
+    "FARGATE": 3,
+    "FARGATE_SPOT": 3
+   },
+   "tasks": [
+    {
+     "task": "66d268c989b946b5bd4250568d1d8f1c",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:43:20.805000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "4dece0b95f6145d6b7de6d71dac1ea58",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:43:04.123000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "e628e320cdc74decadcb762219d33734",
+     "provider": "FARGATE",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:43:27.107000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "c83567abd82248e496fc768eba1efb9d",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:43:31.427000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "cc3078616f25423e985f7288d4a13f85",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1a",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:43:32.948000+02:00",
+     "container_instance": null
+    },
+    {
+     "task": "66dcdf3015774524b0e6dcc32446715e",
+     "provider": "FARGATE_SPOT",
+     "launch_type": "FARGATE",
+     "az": "us-east-1b",
+     "last_status": "RUNNING",
+     "desired_status": "RUNNING",
+     "health": "HEALTHY",
+     "started": "2026-10-26T12:43:34.044000+02:00",
+     "container_instance": null
+    }
+   ],
+   "last_event": "(service routes-api) has reached a steady state."
+  }
+ },
+ "target_groups": {
+  "alb": {
+   "healthy": 6
+  }
+ }
+}

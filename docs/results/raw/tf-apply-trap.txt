@@ -1,0 +1,151 @@
+Acquiring state lock. This may take a few moments...
+data.aws_caller_identity.current: Reading...
+data.aws_availability_zones.available: Reading...
+aws_service_discovery_http_namespace.main: Refreshing state... [id=ns-fuuyabo7zbssgbza]
+aws_vpc.main: Refreshing state... [id=vpc-0ac51bf8f6efae5a3]
+aws_iam_role.execution: Refreshing state... [id=mvelaphanda-routes-execution]
+aws_ecs_cluster.main: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:cluster/mvelaphanda-routes]
+aws_cloudwatch_log_group.main: Refreshing state... [id=/ecs/mvelaphanda-routes]
+data.aws_caller_identity.current: Read complete after 1s [id=<account-id>]
+aws_iam_role.routes_task: Refreshing state... [id=mvelaphanda-routes-routes-api-task]
+aws_iam_role.eta_task: Refreshing state... [id=mvelaphanda-routes-eta-engine-task]
+data.aws_availability_zones.available: Read complete after 2s [id=us-east-1]
+aws_iam_role_policy_attachment.execution: Refreshing state... [id=mvelaphanda-routes-execution/arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy]
+aws_ecs_task_definition.eta: Refreshing state... [id=mvelaphanda-routes-eta-engine]
+aws_ecs_task_definition.routes: Refreshing state... [id=mvelaphanda-routes-routes-api]
+aws_security_group.loadgen: Refreshing state... [id=sg-0b3b05a0619cde649]
+aws_subnet.public[0]: Refreshing state... [id=subnet-0a30cadd53d05b1cf]
+aws_security_group.tasks: Refreshing state... [id=sg-0c476ab90f45859d6]
+aws_security_group.alb: Refreshing state... [id=sg-028bd1bece01d636e]
+aws_route_table.public: Refreshing state... [id=rtb-0d0805f30a414d55d]
+aws_internet_gateway.main: Refreshing state... [id=igw-01cd28a1b6a9e0292]
+aws_subnet.public[1]: Refreshing state... [id=subnet-0f032701d0649eb26]
+aws_lb_target_group.routes: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:targetgroup/mvelaphanda-routes-api/80cc2c7266830c88]
+aws_vpc_security_group_egress_rule.loadgen_out: Refreshing state... [id=sgr-088bfc80577a8957a]
+aws_vpc_security_group_egress_rule.tasks_out: Refreshing state... [id=sgr-0a14f7e0855e39cb0]
+aws_vpc_security_group_ingress_rule.tasks_from_tasks: Refreshing state... [id=sgr-09fa26a86528613b2]
+aws_vpc_security_group_ingress_rule.tasks_from_alb: Refreshing state... [id=sgr-0faabe7c5506245b5]
+aws_vpc_security_group_ingress_rule.alb_http: Refreshing state... [id=sgr-0374b6cb4afce0047]
+aws_vpc_security_group_egress_rule.alb_to_tasks: Refreshing state... [id=sgr-08f529c10e15c6029]
+aws_ecs_cluster_capacity_providers.main: Refreshing state... [id=mvelaphanda-routes]
+aws_lb.alb: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:loadbalancer/app/mvelaphanda-routes-alb/303ba8bb02e506f7]
+aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0ae6381015633aa4b]
+aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-071f63115acaf7466]
+aws_route.internet: Refreshing state... [id=r-rtb-0d0805f30a414d55d1080289494]
+aws_ecs_service.eta: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/eta-engine]
+aws_ecs_task_definition.loadgen: Refreshing state... [id=mvelaphanda-routes-loadgen]
+aws_lb_listener.http: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:listener/app/mvelaphanda-routes-alb/303ba8bb02e506f7/024eab07d16db89d]
+aws_ecs_service.routes: Refreshing state... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/routes-api]
+aws_lb_listener_rule.block_admin: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:<account-id>:listener-rule/app/mvelaphanda-routes-alb/303ba8bb02e506f7/024eab07d16db89d/5837853f9bf77f8c]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # aws_ecs_service.routes will be updated in-place
+  ~ resource "aws_ecs_service" "routes" {
+      ~ desired_count                      = 2 -> 4
+        id                                 = "arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/routes-api"
+        name                               = "routes-api"
+        tags                               = {}
+        # (19 unchanged attributes hidden)
+
+      - capacity_provider_strategy {
+          - base              = 0 -> null
+          - capacity_provider = "FARGATE" -> null
+          - weight            = 1 -> null
+        }
+      + capacity_provider_strategy {
+          + base              = 0
+          + capacity_provider = "FARGATE_SPOT"
+          + weight            = 1
+        }
+
+        # (6 unchanged blocks hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+Changes to Outputs:
+  ~ routes_mode   = {
+      ~ desired  = 2 -> 4
+      ~ mode     = "fargate" -> "spot"
+      ~ strategy = [
+          ~ {
+              ~ cp     = "FARGATE" -> "FARGATE_SPOT"
+                # (2 unchanged attributes hidden)
+            },
+        ]
+    }
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: 
+aws_ecs_service.routes: Modifying... [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/routes-api]
+aws_ecs_service.routes: Modifications complete after 3s [id=arn:aws:ecs:us-east-1:<account-id>:service/mvelaphanda-routes/routes-api]
+Releasing state lock. This may take a few moments...
+
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+
+Outputs:
+
+alb_dns = "mvelaphanda-routes-alb-338735080.us-east-1.elb.amazonaws.com"
+app_sha256 = {
+  "eta_engine" = "9abddb5371bd85df"
+  "loadgen" = "2ce6d8af280a1de7"
+  "routes_api" = "913b95826a3dca1d"
+}
+azs = tolist([
+  "us-east-1a",
+  "us-east-1b",
+])
+cluster = "mvelaphanda-routes"
+instance_type = "t4g.medium"
+loadgen = {
+  "log_group" = "/ecs/mvelaphanda-routes"
+  "security_group" = "sg-0b3b05a0619cde649"
+  "subnets" = [
+    "subnet-0a30cadd53d05b1cf",
+    "subnet-0f032701d0649eb26",
+  ]
+  "task_definition" = "mvelaphanda-routes-loadgen"
+}
+namespace = {
+  "id" = "ns-fuuyabo7zbssgbza"
+  "name" = "mvelaphanda-routes"
+}
+roles = {
+  "eta_engine" = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-eta-engine-task"
+  "execution" = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-execution"
+  "routes_api" = "arn:aws:iam::<account-id>:role/mvelaphanda-routes-routes-api-task"
+}
+routes_mode = {
+  "desired" = 4
+  "mode" = "spot"
+  "strategy" = [
+    {
+      "base" = 0
+      "cp" = "FARGATE_SPOT"
+      "weight" = 1
+    },
+  ]
+}
+services = {
+  "eta" = "eta-engine"
+  "eta_batch" = null
+  "routes" = "routes-api"
+}
+target_groups = {
+  "alb" = "arn:aws:elasticloadbalancing:us-east-1:<account-id>:targetgroup/mvelaphanda-routes-api/80cc2c7266830c88"
+  "nlb" = null
+}
+task_size = {
+  "cpu" = 512
+  "ec2_cpu" = 256
+  "ec2_memory" = 512
+  "memory" = 1024
+}

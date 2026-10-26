@@ -1,0 +1,4 @@
+t4g.medium: 2 vCPU, 4096 MiB, max network interfaces 3, account setting awsvpcTrunking=disabled
+eta-batch task 256 CPU units / 512 MiB, awsvpc mode -> tasks per instance: by ENI 2 (= 3 - 1 primary), by CPU 8, by memory ~7
+=> 2 per instance, limited by ENI: 6 tasks need 3 instance(s) (without the ENI limit: 1)
+saved /home/michael/ecs-capacity/build/results/ec2-eni.json

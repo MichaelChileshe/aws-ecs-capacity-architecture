@@ -1,0 +1,8 @@
+{
+ "label": "baseline",
+ "profile": "20:120",
+ "task_arn": "arn:aws:ecs:us-east-1:<account-id>:task/mvelaphanda-routes/cfcb3815a8794eb6a603e64f1315cdc0",
+ "task_id": "cfcb3815a8794eb6a603e64f1315cdc0",
+ "started_local_utc": "2026-10-26T10:16:24.488Z",
+ "seconds": 120
+}

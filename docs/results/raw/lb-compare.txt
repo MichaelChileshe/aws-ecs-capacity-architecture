@@ -1,0 +1,10 @@
+== ALB  DNS -> 2 address(es) 44.221.149.205 54.162.15.135
+   /client 20/20 ok, p50 773.8 ms, p90 828.5 ms, answered by tasks ['707690ca', '951b469d']
+   the task saw: peer ['10.160.0.179', '10.160.1.117']  X-Forwarded-For ['<my-public-ip>']  X-Forwarded-Proto ['http']  X-Amzn-Trace-Id present: True
+   /admin/test -> 403 "blocked at the load balancer"   errors: none
+== NLB  DNS -> 2 address(es) 34.198.191.43 44.208.116.58
+   /client 20/20 ok, p50 718.2 ms, p90 912.4 ms, answered by tasks ['707690ca', '951b469d']
+   the task saw: peer ['10.160.0.132', '10.160.1.167']  X-Forwarded-For ['None']  X-Forwarded-Proto ['None']  X-Amzn-Trace-Id present: False
+   /admin/test -> 404 "{'error': 'not found', 'path': '/admin/test', 'ser"   errors: none
+target health: {'alb': {'healthy': 2}, 'nlb': {'healthy': 2}}
+saved /home/michael/ecs-capacity/build/results/lb-compare.json

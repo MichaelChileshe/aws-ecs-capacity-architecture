@@ -1,0 +1,96 @@
+{
+ "instances": [
+  {
+   "instance": "i-0bab7671e385cd2c6",
+   "running_tasks": 2,
+   "enis": 3,
+   "interfaces": [
+    [
+     0,
+     "interface",
+     "10.160.1.13",
+     ""
+    ],
+    [
+     1,
+     "interface",
+     "10.160.1.130",
+     "arn:aws:ecs:us-east-1:<account-id>:attac"
+    ],
+    [
+     2,
+     "interface",
+     "10.160.1.52",
+     "arn:aws:ecs:us-east-1:<account-id>:attac"
+    ]
+   ]
+  },
+  {
+   "instance": "i-053047b7ed6926254",
+   "running_tasks": 2,
+   "enis": 3,
+   "interfaces": [
+    [
+     0,
+     "interface",
+     "10.160.1.193",
+     ""
+    ],
+    [
+     1,
+     "interface",
+     "10.160.1.134",
+     "arn:aws:ecs:us-east-1:<account-id>:attac"
+    ],
+    [
+     2,
+     "interface",
+     "10.160.1.43",
+     "arn:aws:ecs:us-east-1:<account-id>:attac"
+    ]
+   ]
+  },
+  {
+   "instance": "i-0304bbf46938177e9",
+   "running_tasks": 1,
+   "enis": 2,
+   "interfaces": [
+    [
+     0,
+     "interface",
+     "10.160.1.18",
+     ""
+    ],
+    [
+     1,
+     "interface",
+     "10.160.1.163",
+     "arn:aws:ecs:us-east-1:<account-id>:attac"
+    ]
+   ]
+  },
+  {
+   "instance": "i-0ecca60ee2abcd350",
+   "running_tasks": 1,
+   "enis": 2,
+   "interfaces": [
+    [
+     0,
+     "interface",
+     "10.160.1.101",
+     ""
+    ],
+    [
+     1,
+     "interface",
+     "10.160.1.253",
+     "arn:aws:ecs:us-east-1:<account-id>:attac"
+    ]
+   ]
+  }
+ ],
+ "ssm": {
+  "instance": "i-0bab7671e385cd2c6",
+  "output": "ens5             UP             12:ff:db:93:af:6d <BROADCAST,MULTICAST,UP,LOWER_UP> \ndocker0          DOWN           02:42:c9:d0:6c:d2 <NO-CARRIER,BROADCAST,MULTICAST,UP> \necs-bridge       UP             92:97:36:dd:ec:62 <BROADCAST,MULTICAST,UP,LOWER_UP> \nveth4936881a@if3 UP             76:a3:7c:0f:2e:45 <BROADCAST,MULTICAST,UP,LOWER_UP> \nvethe355a3f5@if3 UP             46:b0:40:1a:6d:26 <BROADCAST,MULTICAST,UP,LOWER_UP> \n\n{\"Cluster\":\"mvelaphanda-routes\",\"ContainerInstanceArn\":\"arn:aws:ecs:us-east-1:<account-id>:container-instance/mvelaphanda-routes/4ebd5d4218954f70afc489d3dce02d0b\",\"Version\":\"Amazon ECS Agent - v1.108.0 (*fef29b5c)\"}"
+ }
+}
